@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">You cannot apply using this online service</h1>
+
+    <h2 class="govuk-heading-m">
+      We can only process your application if the Department for Work and
+      Pensions (DWP) or the Department for Communities (DfC) invited you to use
+      this service.
+    </h2>
+
+    <br />
+    <p class="govuk-body">
+      <strong
+        >National Insurance number application line (England, Scotland and
+        Wales)</strong
+      ><br />
+      Telephone: 0800 141 2075<br />
+      Textphone: 0800 141 2438<br />
+      Monday to Friday, 8am to 6pm<br /><br />
+    </p>
+
+    <p class="govuk-body">
+      <strong
+        >National Insurance number application line (Northern Ireland)</strong
+      ><br />
+      Telephone: 0800 587 0024<br />
+      Textphone: 0800 587 0194<br />
+      Monday to Friday, 8am to 6pm<br /><br />
+      <a href="https://www.gov.uk/call-charges" class="govuk-link"
+        >Find out about call charges</a
+      >
+    </p>
+  </div>
+</div>
+
+{% endblock %}

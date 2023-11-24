@@ -1,0 +1,56 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Before you start</h1>
+
+    <p class="govuk-body">
+      Applying for a National Insurance number is a two-step process.
+    </p>
+
+    <p class="govuk-body">
+      When you have filled out this online form, there are additional steps you
+      must take to complete your application. We will tell you what you need to
+      do next at the end of this online form.
+    </p>
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text"
+        ><span class="govuk-warning-text__assistive">Warning</span> If you pause
+        your application for 30 minutes or longer, your session will expire and
+        you will need to start your application again.
+      </strong>
+    </div>
+
+    <p class="govuk-body">
+      If you have any of the following documents, make sure you have them with
+      you before you apply:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-8">
+      <li>A passport from any country</li>
+      <li>Biometric residence permit (BRP)</li>
+      <li>National identity card</li>
+    </ul>
+    <p class="govuk-body">
+      You may need to enter information from these documents during your
+      application – for example, your passport number.
+    </p>
+
+    <p class="govuk-body">
+      If you do not have any of these documents, we may ask you for other
+      information.
+    </p>
+
+    <br /><br />
+    <form action="plan-to-work" method="post" novalidate>
+      <button type="submit" class="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

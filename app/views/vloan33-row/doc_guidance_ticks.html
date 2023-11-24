@@ -1,0 +1,93 @@
+{% extends "layouts/main.html" %} {% block pageTitle %}
+  Question page
+{% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Which of these do you have that prove your identity or immigration status?</h1>
+
+      <p class="govuk-body">Select all that apply</p>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+ <br>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="check" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-checkboxes__label" for="contact">
+          Passport that matches the nationality you selected previously
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="contact-2" name="contact" type="checkbox" value="check2" data-aria-controls="conditional-contact-2">
+        <label class="govuk-label govuk-checkboxes__label" for="contact-2">
+          Biometric Residence Permit (BRP)
+        </label>
+      </div>
+            <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="contact-3" name="contact" type="checkbox" value="check3" data-aria-controls="conditional-contact-3">
+        <label class="govuk-label govuk-checkboxes__label" for="contact-3">
+          Valid UK visa sticker (vignette) in my passport
+        </label>
+      </div>
+            <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="contact-4" name="contact" type="checkbox" value="check4" data-aria-controls="conditional-contact-4">
+        <label class="govuk-label govuk-checkboxes__label" for="contact-4">
+          Valid UK visa via the ‘UK Immigration: ID Check’ smartphone app
+        </label>
+      </div>
+            <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="contact-5" name="contact" type="checkbox" value="check5" data-aria-controls="conditional-contact-5">
+        <label class="govuk-label govuk-checkboxes__label" for="contact-5">
+          Settled or pre-settled status under the EU Settlement Scheme
+        </label>
+      </div>
+     <div class="govuk-radios__divider">or</div>
+     
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="contact-6" name="contact" type="checkbox" value="check 6" data-aria-controls="conditional-contact-6" data-behaviour="exclusive" >
+        <label class="govuk-label govuk-checkboxes__label" for="contact-6">
+          None of these
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact-6">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-text">
+            If you do not have any of these, you may need to attend an appointment to prove your identity. We will tell you if that happens and what you need to do.
+          </label>
+          
+      </div>
+    </div>
+
+    
+
+    <br><br>
+    <a href="doc_guidance_documents" role="button" draggable="false" class="govuk-button govuk-button--start govuk-body govuk-!-margin-bottom-7" data-module="govuk-button">
+      Continue
+      <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+      </svg>
+    </a>
+<br><br>
+  </fieldset>
+</div>
+
+
+
+      <br/><br/>
+      <p class="govuk-body "><strong>Help us improve the Apply for a National Insurance number service</strong>
+      <p class="govuk-body govuk-!-padding-bottom-7"><a class="govuk-link" href="https://getinvolved.dwp.gov.uk/digital/ba7cd86f/" target="_blank">Take a short survey</a></p>
+
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Select your address</h1>
+    <!--<p>What is your address in the UK?</p>-->
+
+    <form class="form" action="address-correspondence-question" method="get">
+      <div class="govuk-form-group">
+        <p class="govuk-body govuk-!-padding-bottom-4">
+          <strong>Postcode:</strong> {{ data['postcode'] }}
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a class="govuk-link" href="address">Change</a>
+        </p>
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label" for="address"> Select your address </label>
+        </h3>
+        <select class="govuk-select" id="address" name="address">
+          <option value="30 Springbank Road" selected>
+            15 addresses found
+          </option>
+          <option value="30 Springbank Road">30 Springbank Road</option>
+          <option value="31 Springbank Road">31 Springbank Road</option>
+          <option value="32 Springbank Road">32 Springbank Road</option>
+          <option value="33 Springbank Road">33 Springbank Road</option>
+          <option value="34 Springbank Road">34 Springbank Road</option>
+          <option value="35 Springbank Road">35 Springbank Road</option>
+          <option value="36 Springbank Road">36 Springbank Road</option>
+          <option value="37 Springbank Road">37 Springbank Road</option>
+          <option value="38 Springbank Road">38 Springbank Road</option>
+          <option value="39 Springbank Road">39 Springbank Road</option>
+          <option value="40 Springbank Road">40 Springbank Road</option>
+          <option value="41 Springbank Road">41 Springbank Road</option>
+          <option value="42 Springbank Road">42 Springbank Road</option>
+          <option value="43 Springbank Road">43 Springbank Road</option>
+          <option value="44 Springbank Road">44 Springbank Road</option>
+          <option value="45 Springbank Road">45 Springbank Road</option>
+        </select>
+      </div>
+
+      <p class="govuk-body govuk-!-padding-bottom-7">
+        <a class="govuk-link" href="address-not-listed"
+          >My address is not listed</a
+        >
+      </p>
+
+      <button class="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

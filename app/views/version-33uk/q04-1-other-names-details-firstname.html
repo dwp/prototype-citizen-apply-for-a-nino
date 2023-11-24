@@ -1,0 +1,34 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      What were your first and middle names before {{ data['given-names'] }}?
+    </h1>
+
+    <form class="form" action="q04-any-other-names-yn-change" method="post">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="given-names">
+          First and middle names
+        </label>
+
+        <input
+          class="govuk-input"
+          id="given-names"
+          name="given-names"
+          type="text"
+          autocomplete="name"
+          spellcheck="false"
+          value="{{ data['given-names'] }}"
+        />
+      </div>
+
+      <button class="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

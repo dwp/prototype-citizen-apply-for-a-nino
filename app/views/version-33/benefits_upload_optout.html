@@ -1,0 +1,97 @@
+{% extends "layouts/main.html" %} {% block pageTitle %}
+  Question page
+{% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+
+
+
+ <div class="govuk-form-group govuk-!-padding-bottom-4">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios">
+
+
+        <h1 class="govuk-heading-xl">Upload proof of your identity</h1>
+
+        <p class="govuk-body">You will need to take and upload photos of your identity documents and a photo of yourself.</p>
+        
+        <p class="govuk-body">You can ask someone else to help you or take the photographs for you.</p>
+  
+
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>Do not upload old images of your identity documents or of yourself.<br> We need you to take and upload new photos, following the instructions<br> on the next screens.</strong>
+</div>
+        
+
+        <h3 class="govuk-heading-m">Your personal information</h3>
+
+        <p class="govuk-body">We treat personal information carefully. <br>We will only use your photographs to check your identity. </p>
+
+        <br><br>
+        <h3 class="govuk-heading-m">Are you ready to continue?</h3>
+        
+        
+ 
+<div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+      
+
+ <form class="form" action="upload_optout_answer" method="post">
+ 
+         <div class="govuk-form-group govuk-!-padding-bottom-4">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+
+              
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="upload" name="upload_optout1" type="radio" value="yes" data-aria-controls="doc1">
+                <label class="govuk-label govuk-radios__label" for="upload-yes">
+                  Yes
+                </label>
+              </div>
+              
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="upload" name="upload_optout1" type="radio"  value="no" data-aria-controls="doc2">
+                <label class="govuk-label govuk-radios__label" for="docno">No, I cannot upload photographs online</label>
+              </div>
+            
+             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="doc2">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="doc2"> <p>If you cannot upload photographs, you will need to prove your identity in a different way, which will take longer. We will contact you when we receive your application to tell you what to do.</div>
+              </div>      
+            </div>
+            </div>
+           </div>
+           </div>
+         </fieldset>
+        </div>
+
+     
+     
+     
+         <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      
+       </fieldset>
+
+
+</form>
+
+ </div>
+</div>
+
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

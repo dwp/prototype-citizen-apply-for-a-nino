@@ -1,0 +1,51 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      We might already have a National Insurance number
+    </h1>
+
+    <div class="govuk-form-group govuk-!-padding-bottom-4">
+      <fieldset class="govuk-fieldset">
+        <div class="govuk-radios">
+          <p class="govuk-body">You told us that:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>you are British</li>
+            <li>you are aged between 16 and 19</li>
+            <li>
+              you don’t know if your parent or guardian claimed Child Benefit
+              for you
+            </li>
+          </ul>
+
+          <p class="govuk-body">
+            This means we may already have a National Insurance number for you
+            in our system.
+          </p>
+
+          <p class="govuk-body">
+            To find out if you already have a National Insurance number, you
+            should contact HMRC.
+          </p>
+          <br />
+
+          <br />
+
+          <button
+            class="govuk-button"
+            onclick="window.location.href='https://www.gov.uk/government/organisations/hm-revenue-customs/contact/national-insurance-numbers';"
+          >
+            Continue to HMRC
+          </button>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

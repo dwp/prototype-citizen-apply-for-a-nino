@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      We might already have a National Insurance number for you
+    </h1>
+
+    <div class="govuk-form-group govuk-!-padding-bottom-4">
+      <fieldset class="govuk-fieldset">
+        <div class="govuk-radios">
+          <p class="govuk-body">
+            Based on the answers you have given us, we might already have a
+            National Insurance number for you.
+          </p>
+
+          <p class="govuk-body">
+            The quickest way to find out if you already have a National
+            Insurance number is to contact HMRC on one of the numbers below.
+          </p>
+          <br />
+          <p class="govuk-body">
+            <strong>Telephone:</strong><br />0300 200 3500
+          </p>
+
+          <p class="govuk-body">
+            <strong>Textphone:</strong><br />0300 200 3519
+          </p>
+
+          <br /><br />
+
+          <h3 class="govuk-heading-s">
+            Do you still want to apply for a National Insurance number?
+          </h3>
+          <p class="govuk-body">
+            If you have never had a National Insurance number, you can apply
+            through this service. <br /><br />When you have completed your
+            application and given us proof of your identity, it can take up to 8
+            weeks to receive a response.
+          </p>
+
+          <a href="lived-uk_4A">Apply for a National Insurance number</a>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

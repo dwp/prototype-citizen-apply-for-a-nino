@@ -1,0 +1,229 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Your immigration status share code</h1>
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text"
+        ><span class="govuk-warning-text__assistive">Warning</span>Only fill in
+        this form if the Department for Work and Pensions (DWP) sent you a text
+        message or a letter asking you to do so.</strong
+      >
+    </div>
+
+    <p class="govuk-body">
+      As part of your application for a National Insurance number, you gave us
+      an immigration status share code.
+    </p>
+
+    <p class="govuk-body">
+      The share code you gave us has expired or is invalid. You need to generate
+      a new share code.
+    </p>
+
+    <p class="govuk-body">A share code:</p>
+    <ul class="app-task-list__items">
+      <li>
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <li>
+            consists of 9 digits (letters and numbers) – for example: AB123456Z
+          </li>
+          <li>
+            is different from your 16-digit EU Settlement Scheme application
+            reference number
+          </li>
+          <li>is different from your National Insurance number</li>
+          <li>
+            will only work for your application – you cannot pass your share
+            code on to someone else, or use someone else’s code
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <p class="govuk-body">
+      Share codes are only valid for 30 days. Generate a new share code and
+      enter it below straight away.
+    </p>
+    <p class="govuk-body">To generate a share code:</p>
+
+    <ul class="app-task-list__items">
+      <li>
+        <ol class="govuk-list govuk-list--number govuk-list--spaced">
+          <li>
+            Go to
+            <a
+              href="https://www.gov.uk/view-prove-immigration-status"
+              target="_blank"
+              >www.gov.uk/view-prove-immigration-status</a
+            >
+            - this will open in a new tab
+          </li>
+          <li>
+            Follow the instructions to view and prove your immigration status
+          </li>
+          <li>
+            When you see
+            <span style="font-weight: bold"
+              >what do you need this share code for</span
+            >, select <span style="font-weight: bold">something else</span>
+          </li>
+        </ol>
+      </li>
+    </ul>
+
+    <br />
+    <h3 class="govuk-heading-m">
+      National Insurance number application reference
+    </h3>
+
+    <div class="govuk-form-group">
+      <p class="govuk-body">For example, B1234567</p>
+
+      <p class="govuk-body">
+        This reference number was included in the text message or letter we sent
+        you asking you to send us a new share code.
+      </p>
+
+      <input
+        class="govuk-input govuk-input--width-10"
+        name="ref_number"
+        type="text"
+      />
+    </div>
+
+    <br /><br />
+
+    <h3 class="govuk-heading-m">Immigration status share code</h3>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label"> For example, AB123456Z </label>
+
+      <br />
+      <input
+        class="govuk-input govuk-input--width-10"
+        name="ref_number"
+        type="text"
+      />
+    </div>
+
+    <br /><br />
+    <br />
+
+    <div class="govuk-checkboxes__item">
+      <input
+        class="govuk-checkboxes__input"
+        id="waste-3"
+        name="waste"
+        type="checkbox"
+        value="farm"
+      />
+      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+        I have reviewed the information on this page and confirm that it is
+        correct
+      </label>
+    </div>
+
+    <br /><br />
+
+    <form action="share_code_confirmation" method="post" novalidate>
+      <input type="hidden" name="answers-checked" value="true" />
+
+      <button type="submit" class="govuk-button">Submit</button>
+    </form>
+
+    <br />
+    <br /><br /><br />
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 1
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">Enter your application reference</p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 2
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">
+          Your application reference contains 1 letter and 7 numbers
+        </p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 3
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">
+          Your application reference must contain 8 characters
+        </p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 4
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">Enter your share code</p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 5
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">
+          Enter your share code using only letters and numbers
+        </p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 6
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">Your share code must contain 9 characters</p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 7
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">
+          Confirm that the information you have entered is correct
+        </p>
+      </div>
+    </details>
+  </div>
+</div>
+
+{% endblock %}

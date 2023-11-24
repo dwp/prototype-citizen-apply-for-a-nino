@@ -1,0 +1,77 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Question page {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">How do you need us to send you letters?</h1>
+
+    <p class="govuk-body">
+      If we give you a National Insurance number, we have to send it to you by
+      post. For security reasons, we cannot send National Insurance numbers by
+      email.
+    </p>
+
+    <p class="govuk-body">
+      We will send you a standard printed copy of each letter, which you can show to an
+      employer. </p>
+      <p>If you have a disability, we can also send you letters in braille or large print, or an audio CD by post.
+    </p>
+    <br />
+
+    <h3 class="govuk-heading-m">
+      Can we send you standard printed letters only?
+    </h3>
+
+    <form class="form" action="email-check" method="post">
+      <div class="govuk-form-group">
+        <div
+          class="govuk-radios govuk-radios--conditional"
+          data-module="govuk-radios"
+        >
+          <div class="govuk-radios__item">
+            <input
+              class="govuk-radios__input"
+              id="email"
+              name="xemail-address"
+              type="radio"
+              data-aria-controls="email-address1"
+            />
+            <label class="govuk-label govuk-radios__label" for="email-address">
+              Yes
+            </label>
+          </div>
+
+          <div class="govuk-radios__item">
+            <input
+              class="govuk-radios__input"
+              id="email"
+              name="xphone"
+              type="radio"
+              data-aria-controls="phone2"
+            />
+            <label class="govuk-label govuk-radios__label" for="phone">
+              No, I also need braille, large print or an audio CD
+            </label>
+          </div>
+          <div
+            class="govuk-radios__conditional govuk-radios__conditional--hidden"
+            id="phone2"
+          >
+
+          </div>
+
+          <!---->
+        </div>
+      </div>
+      <br />
+
+      <button class="govuk-button">Continue</button>
+    </form>
+    <br />
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Were you born in the UK?</h1>
+    <p>
+      Select yes if you were born in the UK, even if you moved to another
+      country.
+    </p>
+
+    <form class="form" action="lived-uk4A" method="post">
+      <div class="govuk-form-group govuk-!-padding-bottom-4">
+        <fieldset class="govuk-fieldset">
+          <div
+            class="govuk-radios govuk-radios--conditional"
+            data-module="govuk-radios"
+          >
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="lived-uk-4"
+                name="lived-uk04A"
+                type="radio"
+                value="Yes"
+                data-aria-controls="conditional-lived-uk-4"
+              />
+              <label class="govuk-label govuk-radios__label" for="lived-uk04A">
+                Yes
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="lived-uk-conditional-4"
+                name="lived-uk04A"
+                type="radio"
+                value="No"
+                data-aria-controls="conditional-lived-uk-4"
+              />
+              <label class="govuk-label govuk-radios__label" for="lived-uk04A">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <details class="govuk-details govuk-!-padding-bottom-4">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Why are we asking this question?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">
+            You do not need to have been born in the UK to apply for a National
+            Insurance number.
+          </p>
+          <p class="govuk-body">
+            If you were born in the UK, you may already have a National
+            Insurance record. We will search for an existing National Insurance
+            record in your name and send it to you.
+          </p>
+        </div>
+      </details>
+
+      <button class="govuk-button">Continue</button>
+    </form>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">Select yes if you were born in the UK</p>
+      </div>
+    </details>
+  </div>
+</div>
+
+{% endblock %}

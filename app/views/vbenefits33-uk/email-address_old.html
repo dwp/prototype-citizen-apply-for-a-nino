@@ -1,0 +1,71 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl afn-20px-margin">
+      Can we contact you by email?
+    </h1>
+
+    <p>
+      We will only use your email address to contact you about your application
+      for a National Insurance number.
+    </p>
+
+    <form class="form" action="phone-number" method="post">
+      <div class="govuk-form-group">
+        <label class="govuk-label">Enter your email address</label>
+        <input
+          class="govuk-input"
+          id="email-address"
+          name="email-address"
+          type="text"
+          autocomplete="name"
+          spellcheck="false"
+        />
+      </div>
+
+      <p class="govuk-body govuk-!-padding-bottom-7">
+        <a class="govuk-link" href="phone-number"
+          >I don't have an email address</a
+        >
+      </p>
+
+      <button class="govuk-button">Continue</button>
+    </form>
+
+    <a href="email-address_test">Email Address B</a>
+
+    <br />
+    <br /><br /><br />
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 1
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">
+          Enter your email address in the format name@example.com
+        </p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 2
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">
+          Your email address must be between 1 and 100 characters
+        </p>
+      </div>
+    </details>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Home – {{serviceName}} –
+GOV.UK Prototype Kit {% endblock %} {% block content %}
+
+
+<div class="govuk-grid-row">
+
+  <form method="post">
+
+   <div class="govuk-tabs" data-module="govuk-tabs">
+
+     <ul class="govuk-tabs__list">
+       <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+         <a class="govuk-tabs__tab">Versions </a>
+       </li>
+     </ul>
+
+
+      <div class="govuk-tabs__panel" id="citizen">
+
+	    	<h2 class="govuk-heading-m">Work inspired</h2>
+	    	<p><strong class="govuk-tag govuk-tag--orange">In progress</strong></p> 
+
+	    	<p class="govuk-body govuk-!-font-weight-bold">Version 33 contains:</p>
+        <p>Suggested Gov.uk pages <br/>
+        Content changes as per London review<br/>
+        Duplicate aspplication screens<br/>
+        Under 19 sign posting</p>
+
+        <br>       
+	    	<a href="/version-33/index" class="govuk-button">Continue</a>
+        <br>       
+        <p><strong>Link for user testing:</strong> <br/>https://apply-nino.herokuapp.com/version-33/
+
+
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">      
+
+		    <h2 class="govuk-heading-m">Benefits</h2>
+		    <p>AfN's journey for benefit applicants.</p>
+       
+	    	<p><strong class="govuk-tag govuk-tag--orange">In progress</strong></p> 
+        <br>
+        
+	    	<a href="vbenefits33/index" class="govuk-button">Continue</a>
+        <br>
+        <p><strong>Link for user testing:</strong> <br/> https://apply-nino.herokuapp.com/vbenefits33
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+
+		    <h2 class="govuk-heading-m">Student Loans</h2>
+		    <p>AfN's journey for student loans applicants.</p>
+       
+	    	<p><strong class="govuk-tag govuk-tag--orange">In progress</strong></p> 
+        <br><a href="vloan33/index" class="govuk-button">Continue</a>
+        <br>
+        <p><strong>Link for user testing:</strong> <br/>https://applynino-design.herokuapp.com/vloan33</p>
+
+    </form>
+
+ </div>
+  </div>
+</div>
+
+{% endblock %}

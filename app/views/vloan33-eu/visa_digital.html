@@ -1,0 +1,80 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      When you applied for a UK visa, did you use the ‘UK Immigration: ID Check’
+      app to scan your documents?
+    </h1>
+
+    <form class="form" action="digital-answer1" method="post">
+      <div class="govuk-form-group">
+        <fieldset
+          class="govuk-fieldset"
+          aria-describedby="how-contacted-conditional-hint"
+        >
+          <div
+            class="govuk-radios govuk-radios--conditional"
+            data-module="govuk-radios"
+          >
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                name="digital-answer01"
+                type="radio"
+                value="Yes"
+                data-aria-controls="vignette-answer"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="vignette-answer1-yes"
+              >
+                Yes
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                name="digital-answer01"
+                type="radio"
+                value="No"
+                data-aria-controls="vignette-answerx"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="vignette-answer1"
+              >
+                No
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                name="digital-answer01"
+                type="radio"
+                value="No"
+                data-aria-controls="vignette-answerx"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="vignette-answer1"
+              >
+                I don't know
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <br /><br />
+
+      <button class="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

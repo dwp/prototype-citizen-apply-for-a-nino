@@ -1,0 +1,129 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p><strong>To:</strong> {{ data['email-address'] }}</p>
+    <p>
+      <strong>Subject: </strong> Your application for a National Insurance
+      number
+    </p>
+    <br /><br />
+    <p>Dear, {{ data['given-names'] }} {{ data['family-name'] }}</p>
+
+    <p class="govuk-body">
+      We have received your application for a National Insurance number.
+    </p>
+
+    <p class="govuk-body">
+      <strong
+        >You now need to make an appointment to see us, if you have not already
+        done so.
+      </strong>
+    </p>
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text"
+        ><span class="govuk-warning-text__assistive">Warning</span> We cannot
+        make a decision about your application until you attend an appointment
+        and show us your identity documents</strong
+      >
+    </div>
+
+    <br />
+    <h2 class="govuk-heading-l">What you need to do next</h2>
+    <br />
+
+    <ol class="app-task-list">
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">1. </span> Make a note of
+          this reference number:
+        </h2>
+        <ul class="app-task-list__items">
+          <li>
+            <h3 class="govuk-heading-m">B0048572</h3>
+            <p>
+              This is the reference number for your application. Make a note of
+              it and keep it safe. It is not your National insurance number.
+            </p>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">2. </span>To make an
+          appointment with us, telephone us on the number below.
+        </h2>
+        <ul class="app-task-list__items">
+          <li>
+            <div class="govuk-inset-text">
+              <p class="govuk-body">
+                Telephone: 0800 678 3696<br />
+                Textphone: 0800 141 2438 <br />
+                Monday to Friday, 8am to 6pm<br />
+                <a href="https://www.gov.uk/call-charges" class="govuk-link"
+                  >Find out about call charges</a
+                >
+              </p>
+            </div>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">3. </span>Attend your
+          appointment so we can check your identity documents.
+        </h2>
+        <ul class="app-task-list__items">
+          <li></li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">4. </span>Wait to hear
+          from us.
+        </h2>
+      </li>
+    </ol>
+
+    <hr
+      class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+    />
+
+    <p class="govuk-body">
+      If we approve your application, we will send you a National Insurance
+      number within 4 weeks of your appointment.
+    </p>
+    <br />
+    <p class="govuk-body">
+      You can start work and get paid without a National Insurance number if you
+      can prove you can work in the UK. Your employer might ask for proof of
+      your right to work in the UK.
+    </p>
+
+    <br />
+    <br />
+
+    <p class="govuk-body">Yours sincerely,</p>
+
+    <p class="govuk-body">
+      Office Manager <br />
+
+      Apply for a National Insurance number
+    </p>
+  </div>
+</div>
+<br /><br /><br /><br />
+<a href="email_serco">Current Serco Email</a> <br /><br />
+<a href="email_serco_new">New Serco Email</a>
+
+{% endblock %}

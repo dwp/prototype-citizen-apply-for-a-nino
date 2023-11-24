@@ -1,0 +1,84 @@
+{% extends "layouts/main.html" %} {% block pageTitle %}
+  Question page
+{% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+            <form class="form" action="upload_brpfront_check" method="post">
+        
+        <h1 class="govuk-heading-xl">Take and upload a photo of your biometric residence permit (BRP)</h1>
+
+
+ 
+<ol class="govuk-list govuk-list--number">
+ 
+ 
+  <li><strong>Get your BRP ready</strong></li>
+      <p>Put your BRP on a flat surface so that your picture and the BRP number are visible. </p>
+ 
+   <br/>
+  <li><strong>Take a photo</strong></li>
+     <p class="govuk-body">Take a photo using a smartphone, tablet or digital camera. You can get someone else to take the photo for you.</p>
+
+      <p class="govuk-body">To avoid light reflection, take the photo in a bright room and turn the flash off.</p>
+
+       <p class="govuk-body">Make sure that:</p>
+        <ul class="govuk-list govuk-list--bullet">
+         <li>all four corners of the BRP are visible</li>
+         <li>the photo is in focus</li>
+         <li>the details on your BRP are clear enough to read</li>
+      </ul> 
+      <br/>
+ 
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>Do not edit your photo. <br/>This includes changing the colours and using filters. We can only accept *.JPG, *.JPEG and *.PNG formats.</strong>
+</div>
+
+   
+        <img src="/public/images/brp_front_example.png" width="510" display="inline-block" height="410" ;>
+
+      <br><br><br>
+ 
+
+  <li><strong>Check the photo</strong></li>
+     
+   <p class="govuk-body">Make sure that the photo meets the requirements listed above.</p>
+    <br/>
+
+  <li><strong>Save the photo</strong></li>
+      <p> Save the photo to the device you are using to apply for a National Insurance number. </p>
+</ol>
+
+
+<br><br><br><br>
+
+       <h2 class="govuk-heading-m">Choose and upload your photo</h2>
+
+<br><br>
+
+
+                <input type="file" id="photo-button" hidden />
+                <label class="govuk-button govuk-button--secondary" data-module="govuk-button" style="color:#000" id="photo-label-text" for="photo-button" role="button">
+                    Choose file
+                </label>
+
+                
+     <br/><br/><br>
+       
+        <button class="govuk-button">Upload</button>
+        </form>
+              
+            <br><br>
+                
+       
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

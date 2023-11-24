@@ -1,0 +1,206 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Do you have a passport?</h1>
+
+    <p class="govuk-body">
+      Tell us if you have a passport that matches the nationality you selected
+      previously.
+    </p>
+
+    <form class="form" action="passport-answer" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="pass-hint">
+          <div
+            class="govuk-radios govuk-radios--conditional"
+            data-module="govuk-radios"
+          >
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="passport-conditional-2"
+                name="passport-question"
+                type="radio"
+                value="Yes"
+                data-aria-controls="passport"
+              />
+              <label class="govuk-label govuk-radios__label" for="passport-yes">
+                Yes
+              </label>
+            </div>
+            <div
+              class="govuk-radios__conditional govuk-radios__conditional--hidden"
+              id="passport"
+            >
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="passport">
+                  Enter your passport number
+                </label>
+                <input
+                  class="govuk-input govuk-!-width-one-third"
+                  id="passport"
+                  type="passport"
+                />
+              </div>
+              <br />
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="passport">
+                  Enter the passport's expiry date
+                </label>
+                <div class="govuk-date-input" id="dob">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label
+                        class="govuk-label govuk-date-input__label"
+                        for="dob-day"
+                      >
+                        Day
+                      </label>
+                      <input
+                        class="govuk-input govuk-date-input__input govuk-input--width-2"
+                        id="dob-day"
+                        name="dob-day"
+                        type="number"
+                        pattern="[0-9]*"
+                      />
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label
+                        class="govuk-label govuk-date-input__label"
+                        for="-month"
+                      >
+                        Month
+                      </label>
+                      <input
+                        class="govuk-input govuk-date-input__input govuk-input--width-2"
+                        id="dob-month"
+                        name="dob-month"
+                        type="number"
+                        pattern="[0-9]*"
+                      />
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label
+                        class="govuk-label govuk-date-input__label"
+                        for="dob-year"
+                      >
+                        Year
+                      </label>
+                      <input
+                        class="govuk-input govuk-date-input__input govuk-input--width-4"
+                        id="dob-year"
+                        name="dob-year"
+                        type="number"
+                        pattern="[0-9]*"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br />
+
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="passport-conditional-3"
+                name="passport-question"
+                type="radio"
+                value="No"
+                data-aria-controls="conditional-passport-conditional-3"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="passport-conditional-3"
+              >
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <details class="govuk-details govuk-!-padding-bottom-4">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            I have dual citizenship
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>
+            If you have
+            <a
+              href="https://www.gov.uk/dual-citizenship"
+              target="_blank"
+              class="govuk-link"
+              >dual citizenship,</a
+            >
+            enter the details of the passport you are using to apply for a
+            National Insurance number.
+          </p>
+        </div>
+      </details>
+
+      <button class="govuk-button">Continue</button>
+    </form>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 1
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">Select yes if you have a passport</p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 2
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">Enter your passport number</p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 3
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">
+          Your passport number can only contain letters and numbers
+        </p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 4
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">
+          Your passport number must be between 1 and 20 characters
+        </p>
+      </div>
+    </details>
+  </div>
+</div>
+
+{% endblock %}

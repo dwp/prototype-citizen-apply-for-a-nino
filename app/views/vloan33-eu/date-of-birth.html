@@ -1,0 +1,123 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <!-- <form class="form" action="dob_answer" method="post"> for the 1980 error option -->
+
+    <form class="form" action="filter-birth-answer" method="post">
+      <h1 class="govuk-heading-xl">What is your date of birth?</h1>
+
+      <div class="govuk-form-group govuk-!-padding-bottom-4">
+        <fieldset
+          class="govuk-fieldset"
+          aria-describedby="dob-hint"
+          role="group"
+        >
+          <p>For example, 31 3 1980</p>
+          <div class="govuk-date-input" id="dob">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label
+                  class="govuk-label govuk-date-input__label"
+                  for="dob-day"
+                >
+                  Day
+                </label>
+                <input
+                  class="govuk-input govuk-date-input__input govuk-input--width-2"
+                  id="dob-day"
+                  name="dob-day"
+                  type="number"
+                  pattern="[0-9]*"
+                />
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="month">
+                  Month
+                </label>
+                <input
+                  class="govuk-input govuk-date-input__input govuk-input--width-2"
+                  id="dob-month"
+                  name="dob-month"
+                  type="number"
+                  pattern="[0-9]*"
+                />
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="year">
+                  Year
+                </label>
+                <input
+                  class="govuk-input govuk-date-input__input govuk-input--width-4"
+                  id="birth"
+                  name="birth"
+                  type="number"
+                  pattern="[0-9]*"
+                />
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+    </form>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 1
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">Enter your date of birth</p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 2
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">Enter a valid date of birth</p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 3
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">
+          You must be 16 or over to apply for a National Insurance number
+        </p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 4
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">
+          Your date of birth must be after 1 January 1900
+        </p>
+      </div>
+    </details>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,216 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+
+<div class="govuk-width-container">
+  <a href="#" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl afn-20px-margin">
+          Apply for a National Insurance number
+        </h1>
+        <br />
+        <p>Dear, {{ data['given-names'] }} {{ data['family-name'] }}</p>
+
+        <p class="govuk-body">
+          You recently asked for a National Insurance number (NINo).<br />
+          We are inviting you to apply using our online service.
+        </p>
+        <br />
+        <p class="govuk-body"><strong>What you need to do</strong></p>
+        <br />
+
+        <p>
+          <strong>Step 1 </strong><br />Apply online at:<br />
+          <a href="https://apply-national-insurance-number.dwp.gov.uk">
+            https://apply-national-insurance-number.dwp.gov.uk
+          </a>
+        </p>
+
+        <p>
+          Complete your application as soon as possible. You are the only person
+          who can use the online service with your details. Please do not share
+          this web address with anyone else.
+        </p>
+
+        <p>
+          At the end of your application, you will get an 8-digit application
+          reference number: for example, B1234567. Make a note of this number
+          and keep it safe.
+        </p>
+
+        <br /><br />
+        <p>
+          <strong>Step 2 </strong> <br />Make photocopies of your identity
+          documents.
+        </p>
+
+        <p class="govuk-body">
+          Make a black and white photocopy of one of the following documents:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            the personal details pages of your passport, including your
+            photograph and signature or
+          </li>
+          <li>both sides of your national identity card</li>
+        </ul>
+
+        <p class="govuk-body">
+          You told us that you have settled or pre-settled status under the
+          European Union Settlement Scheme. You need to generate a share code
+          and write it on page 2 of the CA5400 form.
+        </p>
+        <br />
+        <p class="govuk-body">A share code:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>consists of 9 digits, for example A1234567Z</li>
+          <li>
+            is different from your EU Settlement Scheme application reference
+            number
+          </li>
+          <li>is different from your National Insurance number</li>
+        </ul>
+
+        <p class="govuk-body">
+          Your share code is only valid for 30 days. Please generate a new share
+          code for this application.
+        </p>
+
+        <br />
+
+        <p class="govuk-body">To do this:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            go to
+            <a href="http://www.gov.uk/view-prove-immigration-status"
+              >www.gov.uk/view-prove-immigration-status
+            </a>
+          </li>
+          <li>
+            follow the instructions to view and prove your immigration status
+          </li>
+          <li>
+            when you see ‘what do you need this share code for’, select
+            ‘something else’
+          </li>
+          <li>write the share code on page 2 of the CA5400 form</li>
+        </ul>
+
+        <p class="govuk-body">
+          If you do not have settled or pre-settled status under the EUSS, you
+          cannot currently apply for a National Insurance number online. This is
+          because we will not be able to verify your identity.
+        </p>
+
+        <br /><br />
+        <p>
+          <strong>Step 3 </strong> <br />Complete the CA5400 form enclosed with
+          this letter.
+        </p>
+        <p>
+          You need to write your application reference number on page 2 of the
+          form.
+        </p>
+        <p>
+          If you have settled or pre-settled status under the European Union
+          Settlement Scheme, you also need to include your share code on page 2
+          of the form.
+        </p>
+
+        <br /><br />
+        <p>
+          <strong>Step 4 </strong> <br />Post your completed CA5400 form and
+          photocopies of your identity documents to us by 1 January 2000.
+        </p>
+        <p>Use the envelope provided. You do not need a stamp.</p>
+        <p>
+          If you do not send us the correct documents by this date, your
+          application could be delayed or refused.
+        </p>
+
+        <br /><br />
+
+        <p><strong>What happens next</strong></p>
+
+        <p class="govuk-body">
+          We will process your application and write to you with our decision.
+        </p>
+
+        <p class="govuk-body">
+          If you do not get our decision by 1 January 2000, please contact us on
+          0000 000 0000. You will need to give us the LMS reference number on
+          the first page of this letter.
+        </p>
+
+        <br />
+        <p class="govuk-body">
+          Yours sincerely, <br />
+          <br />
+          Office manager
+        </p>
+
+        <br /><br /><br />
+        <hr
+          class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"
+        />
+        <hr
+          class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"
+        />
+
+        <p><strong>Equality and Diversity</strong></p>
+
+        <p>
+          We treat people fairly, regardless of their disability, ethnicity,
+          gender, sexual orientation, transgender status, marital or civil
+          partnership status, age, religion or beliefs.
+        </p>
+
+        <hr
+          class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"
+        />
+        <p><strong>Call charges</strong></p>
+
+        <p>
+          Calls to 0800 numbers are free from personal mobiles and landlines.
+        </p>
+        <hr
+          class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"
+        />
+        <p>
+          <strong
+            >Why DWP needs personal information and how we treat it</strong
+          >
+        </p>
+
+        <p>
+          We treat personal information carefully. We may use it for any of our
+          purposes. To learn more about information rights and how we use
+          information, please see our DWP Personal Information Charter at
+          www.gov.uk/dwp/personal-information-charter.
+        </p>
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <br /><br /><br />
+        <br /><br /><br />
+        <br /><br />
+        <p><strong>Your Reference:</strong></p>
+        <ul class="govuk-list">
+          <li><strong>LMS Reference</strong></li>
+          <li><strong>6 January 2021</strong></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</div>
+
+<a href="template_CA5400D"> Link to CA5400 </a>
+
+{% endblock %}

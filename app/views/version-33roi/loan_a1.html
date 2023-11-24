@@ -1,0 +1,53 @@
+{% extends "layouts/main.html" %} {% block pageTitle %}
+  Question page
+{% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Have you applied for a UK student loan through the Student Loans Company (SLC)?</h1>
+
+
+ <form class="form" action="loan_a1_answer" method="post">
+
+         <div class="govuk-form-group govuk-!-padding-bottom-4">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+
+
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="loan" name="loan" type="radio" value="yes" data-aria-controls="loan1">
+                <label class="govuk-label govuk-radios__label" for="loan-yes">
+                  Yes
+                </label>
+              </div>
+
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="loan" name="loan" type="radio"  value="no" data-aria-controls="loan2">
+                <label class="govuk-label govuk-radios__label" for="loan-no">No, I have not applied for a student loan</label>
+              </div>
+
+
+            </div>
+           </div>
+           </div>
+
+        </div>
+
+<br>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+<br><br>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "layouts/main.html" %} {% block pageTitle %}
+  Question page
+{% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Have you applied for a National Insurance number for yourself before?</h1>
+
+
+ <form class="form" action="duplicate_apply_answer" method="post">
+
+          <p class="govuk-body">If you’ve applied before, we’ll ask you some questions and tell you whether you need to apply again.</p>
+
+         <div class="govuk-form-group govuk-!-padding-bottom-4">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+
+              
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="duplicate_apply" name="duplicate_apply" type="radio" value="yes" data-aria-controls="duplicate_apply1">
+                <label class="govuk-label govuk-radios__label" for="duplicate_apply-yes">
+                  Yes
+                </label>
+              </div>
+              
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="duplicate_apply" name="duplicate_apply" type="radio"  value="no" data-aria-controls="duplicate_apply2">
+                <label class="govuk-label govuk-radios__label" for="duplicate_apply-no">No</label>
+              </div>
+            
+ 
+            </div>
+           </div>
+           </div>
+         </fieldset>
+        </div>
+
+<br>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

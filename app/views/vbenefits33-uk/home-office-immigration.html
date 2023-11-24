@@ -1,0 +1,129 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Do you have a certificate of application or a reference number from the UK
+      Home Office?
+    </h1>
+
+    <p>
+      The UK Home Office may give you a certificate of application or a
+      reference number if you have no other way to prove your identity.
+    </p>
+
+    <form class="form" action="upload_optout" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="pass-hint">
+          <div
+            class="govuk-radios govuk-radios--conditional"
+            data-module="govuk-radios"
+          >
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="ho-conditional-2"
+                name="ho-document"
+                type="radio"
+                data-aria-controls="ho-doc"
+              />
+              <label class="govuk-label govuk-radios__label" for="ho-doc">
+                Yes
+              </label>
+            </div>
+            <div
+              class="govuk-radios__conditional govuk-radios__conditional--hidden"
+              id="ho-doc"
+            >
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="ho-doc">
+                  Enter your reference number
+                </label>
+                <input
+                  class="govuk-input govuk-!-width-one-third"
+                  id="ho-doc"
+                  name="ho-doc"
+                  type="ho-doc"
+                />
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="ho-conditional3"
+                name="ho-document"
+                value="phone"
+                type="radio"
+                data-aria-controls="ho-conditional-2"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="ho-conditional3"
+                value="phone"
+              >
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+    </form>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 1
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">Select yes or no to continue</p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 2
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">Enter your UK Home Office reference number</p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 3
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">
+          Your UK Home Office reference number can only contain letters and
+          numbers
+        </p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 4
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">
+          Your UK Home Office reference number must be between 1 and 20
+          characters
+        </p>
+      </div>
+    </details>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Are you applying as a partner or family member of an EU citizen?
+    </h1>
+
+    <p>If you are unsure, select no.</p>
+    <form class="form" action="eu-treaty-answer" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="eu-treaty-1"
+              name="eu-treaty01" type="radio" value="Yes" {{
+              checked("eu-treaty", "Yes") }}>
+              <label class="govuk-label govuk-radios__label" for="eu-treaty01">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="eu-treaty-2"
+              name="eu-treaty01" type="radio" value="No"{{ checked("eu-treaty",
+              "No") }}>
+              <label class="govuk-label govuk-radios__label" for="eu-treaty01">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+        <br /><br />
+        <details class="govuk-details govuk-!-padding-bottom-2">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Why are we asking this question?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>
+              We need to know whether you are using EU Treaty rights. Citizens
+              of the European Union and their family members have the right to
+              live and work across the EU.<br /><br />
+              You do not need to be a partner or family member of an EU citizen
+              to apply for a National Insurance number.
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

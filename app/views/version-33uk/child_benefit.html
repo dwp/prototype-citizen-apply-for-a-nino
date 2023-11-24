@@ -1,0 +1,93 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Has your parent or guardian ever claimed Child Benefit for you?
+    </h1>
+
+    <form class="form" action="child_benefit_answer" method="post">
+      <div class="govuk-form-group govuk-!-padding-bottom-4">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios">
+            <p>
+              Most parents and guardians who are responsible for bringing up a
+              child / children will claim
+              <a href="https://www.gov.uk/child-benefit" target="Blank"
+                >Child Benefit</a
+              >.
+            </p>
+            <br />
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="child_benefit-1"
+              name="child_benefit" type="radio" value="yes" {{
+              checked("child_benefit", "Working") }}>
+              <label
+                class="govuk-label govuk-radios__label"
+                for="child_benefit"
+              >
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="child_benefit-2"
+              name="child_benefit" type="radio" value="no" {{
+              checked("child_benefit", "Looking for work") }}>
+              <label
+                class="govuk-label govuk-radios__label"
+                for="child_benefit"
+              >
+                No
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="child_benefit-3"
+              name="child_benefit" type="radio" value="I don't know" {{
+              checked("child_benefit", "Not working and not looking for work")
+              }}>
+              <label
+                class="govuk-label govuk-radios__label"
+                for="child_benefit"
+              >
+                I don't know
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <details class="govuk-details govuk-!-padding-bottom-4">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Why are we asking this question?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">
+            If your parent or guardian claimed Child Benefit for you, it is
+            likely that we:
+          </p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>created a National Insurance number for you</li>
+            <li>
+              sent you a letter about it in the 3 months before your 16th
+              birthday
+            </li>
+          </ul>
+
+          <p class="govuk-body">
+            We might have sent the letter to your previous address.
+          </p>
+        </div>
+      </details>
+
+      <button class="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

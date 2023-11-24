@@ -1,0 +1,97 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Before you start</h1>
+
+    <p class="govuk-body">
+      You should only apply online if you need a National Insurance number to
+      work in the UK.
+    </p>
+
+    <br />
+    <br />
+    <h2 class="govuk-heading-m">Find your identity documents</h2>
+
+    <p class="govuk-body">
+      If you have the following documents, get them ready before you start:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>a passport from any country</li>
+      <li>a biometric residence permit (BRP)</li>
+      <li>
+        a national identity card from an EU country or from Norway,
+        Liechtenstein or Switzerland
+      </li>
+    </ul>
+
+    <p class="govuk-body">
+      You may need to enter information from one or more of these documents –
+      for example, your passport number and your BRP number, if you have these.
+    </p>
+
+    <p class="govuk-body">
+      If you do not have any of these identity documents, you can still apply
+      online. At the end of your application, you will need to make an
+      appointment with us to prove your identity.
+    </p>
+
+    <br /><br />
+
+    <h2 class="govuk-heading-m">Prepare to take digital photos</h2>
+
+    <p class="govuk-body">
+      You may need to take and upload photos of your identity documents and of
+      yourself holding your passport. Do not take these photos yet: we will
+      explain what you need to do.
+    </p>
+
+    <p class="govuk-body">
+      If you have a smartphone, tablet or a digital camera, make sure these are
+      charged and working before you start.
+    </p>
+
+    <p class="govuk-body">
+      If you cannot upload photos, you can still apply online. At the end of
+      your application, you will need to make an appointment with us to prove
+      your identity.
+    </p>
+    <br />
+
+    <div class="govuk-inset-text">
+      <p class="govuk-body">
+        This service is also available in Welsh (<a href="">Cymraeg</a>).
+      </p>
+    </div>
+    <br /><br />
+    <a
+      href="duplicate_apply"
+      role="button"
+      draggable="false"
+      class="govuk-button govuk-button--start govuk-body govuk-!-margin-bottom-7"
+      data-module="govuk-button"
+    >
+      Start now
+      <svg
+        class="govuk-button__start-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="17.5"
+        height="19"
+        viewBox="0 0 33 40"
+        role="presentation"
+        focusable="false"
+      >
+        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+      </svg>
+    </a>
+    <br /><br />
+  </div>
+</div>
+
+{% endblock %}

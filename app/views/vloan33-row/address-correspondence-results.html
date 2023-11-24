@@ -1,0 +1,56 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Select your address</h1>
+    <!--<p>What is your address in the UK?</p>-->
+
+    <form class="form" action="alt_format" method="get">
+      <p>We will send letters to the address you select.</p>
+
+      <div class="govuk-form-group">
+        <p class="govuk-body govuk-!-padding-bottom-4">
+          <strong>Postcode:</strong> {{ data['postcode'] }}
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a class="govuk-link" href="address">Change</a>
+        </p>
+      </div>
+
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper">
+          <label class="govuk-label" for="address">Select your address</label>
+        </h3>
+        <select class="govuk-select" id="address" name="address">
+          <option value="30 Springbank Road" selected>3 addresses found</option>
+          <option value="30 Springbank Road">30 Springbank Road</option>
+          <option value="32 Springbank Road">32 Springbank Road</option>
+          <option value="34 Springbank Road">34 Springbank Road</option>
+        </select>
+      </div>
+
+      <p class="govuk-body govuk-!-padding-bottom-7">
+        <a class="govuk-link" href="address-not-listed-correspondence.html"
+          >My address is not listed</a
+        >
+      </p>
+
+      <button class="govuk-button">Continue</button>
+    </form>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">Select your address from the dropdown list</p>
+      </div>
+    </details>
+  </div>
+</div>
+
+{% endblock %}

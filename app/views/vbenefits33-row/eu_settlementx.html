@@ -1,0 +1,80 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Do you have settled or pre-settled status under the EU Settlement Scheme?
+    </h1>
+
+    <form class="form" action="address" method="post">
+      <div class="govuk-form-group">
+        <fieldset
+          class="govuk-fieldset"
+          aria-describedby="how-contacted-conditional-hint"
+        >
+          <p>
+            You do not need to have settled or pre-settled status to get a
+            National Insurance number.
+          </p>
+
+          <div
+            class="govuk-radios govuk-radios--conditional"
+            data-module="govuk-radios"
+          >
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="euss"
+                name="euss"
+                type="radio"
+                value="Yes"
+                data-aria-controls="euss"
+              />
+              <label class="govuk-label govuk-radios__label" for="id-card-yes">
+                Yes
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="euss"
+                name="euss"
+                value="No"
+                type="radio"
+                value="No"
+              />
+              <label class="govuk-label govuk-radios__label" for="euss">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <details class="govuk-details govuk-!-padding-bottom-4">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            What is the EU Settlement Scheme?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>
+            If you’re an EU, EEA or Swiss citizen, you and your family can
+            <a href="https://www.gov.uk/settled-status-eu-citizens-families"
+              >apply to the EU Settlement Scheme</a
+            >
+            to continue living in the UK after 30 June 2021.
+          </p>
+        </div>
+      </details>
+
+      <button class="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

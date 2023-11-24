@@ -1,0 +1,85 @@
+{% extends "layouts/main.html" %} {% block pageTitle %}
+  Question page
+{% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+
+
+
+ <div class="govuk-form-group govuk-!-padding-bottom-4">
+
+          <div class="govuk-radios">
+
+
+        <h1 class="govuk-heading-xl">Prepare to take and upload photos</h1>
+
+        <p class="govuk-body">We can only give you a National Insurance number if we have proof of your identity. </p>
+
+        <p class="govuk-body">To send us proof of your identity, you need to take and upload new digital photos of all your identity <br/>documents, and a photo of yourself holding your passport. Follow the instructions on the next screens.</p>
+
+        <p class="govuk-body">You can ask someone else to take the photos for you.</p>
+
+
+
+
+
+        <br><br>
+        <h3 class="govuk-heading-m">Can you upload digital photos?</h3>
+
+
+
+<div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+
+ <form class="form" action="upload_optout_answer" method="post">
+
+         <div class="govuk-form-group govuk-!-padding-bottom-4">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+
+
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="upload" name="upload_optout1" type="radio" value="yes" data-aria-controls="doc1">
+                <label class="govuk-label govuk-radios__label" for="upload-yes">
+                  Yes
+                </label>
+              </div>
+
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="upload" name="upload_optout1" type="radio"  value="no" data-aria-controls="doc2">
+                <label class="govuk-label govuk-radios__label" for="docno">No, I cannot upload photos online</label>
+              </div>
+
+             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="doc2">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="doc2"> <p>If you cannot upload photos, you will need to make an appointment at one of our offices to prove your identity. We will tell you how to do this after you apply.<br/> <br/>You may have to wait several weeks for an available appointment. We will contact you 4 weeks after your appointment to tell you if we have approved your application for a National Insurance number.</p></label> </div>
+              </div>
+            </div>
+
+            </div>
+
+
+         </fieldset>
+        </div>
+
+
+
+
+         <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+
+
+</form>
+
+ </div>
+</div>
+
+
+
+
+{% endblock %}

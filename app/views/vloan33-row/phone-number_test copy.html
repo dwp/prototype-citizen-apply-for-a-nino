@@ -1,0 +1,115 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl afn-20px-margin">
+      If we have questions about your application, can we phone you?
+    </h1>
+    <br />
+
+    <p class="govuk-body">
+      We will only use this number to contact you about your application for a
+      National Insurance number.
+    </p>
+
+    <br />
+
+    <form class="form" action="check-your-answers" method="post">
+      <div class="govuk-form-group">
+        <div
+          class="govuk-radios govuk-radios--conditional"
+          data-module="govuk-radios"
+        >
+          <div class="govuk-radios__item">
+            <input
+              class="govuk-radios__input"
+              id="email"
+              name="xemail-address"
+              type="radio"
+              data-aria-controls="email-address1"
+            />
+            <label class="govuk-label govuk-radios__label" for="email-address">
+              Yes
+            </label>
+          </div>
+          <div
+            class="govuk-radios__conditional govuk-radios__conditional--hidden"
+            id="email-address1"
+          >
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="email-address1">
+                <p>
+                  Enter your telephone number including the country code<br />
+                  For example: +44 191 498 0002
+                </p></label
+              >
+              <input
+                class="govuk-input govuk-!-width-one-third"
+                id="xemail-address"
+                name="email-address"
+              />
+            </div>
+          </div>
+
+          <div class="govuk-radios__item">
+            <input
+              class="govuk-radios__input"
+              id="email"
+              name="xemail-address"
+              type="radio"
+              data-aria-controls="email-address2"
+            />
+            <label class="govuk-label govuk-radios__label" for="email-address">
+              No, I do not have a phone number
+            </label>
+          </div>
+          <div
+            class="govuk-radios__conditional govuk-radios__conditional--hidden"
+            id="email-address2"
+          >
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="email-address1">
+                <p>
+                  If you do not have a phone number, we will send you a letter.
+                  This may mean your application takes longer.
+                </p></label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <button class="govuk-button">Continue</button>
+    </form>
+    <br />
+
+    <br /><br /><br /><br />
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 1
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">Enter a telephone number</p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 2
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">Enter a valid telephone number</p>
+      </div>
+    </details>
+  </div>
+</div>
+
+{% endblock %}

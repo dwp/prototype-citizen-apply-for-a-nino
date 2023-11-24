@@ -1,0 +1,85 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Have you lived in the UK all your life?</h1>
+    <p class="govuk-body">
+      You do not need to have always lived in the UK to apply for a National
+      Insurance number.
+    </p>
+
+    <form class="form" action="lived-uk1A" method="post">
+      <div class="govuk-form-group govuk-!-padding-bottom-4">
+        <fieldset class="govuk-fieldset">
+          <div
+            class="govuk-radios govuk-radios--conditional"
+            data-module="govuk-radios"
+          >
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="lived-uk-2"
+                name="lived-uk01A"
+                type="radio"
+                value="Yes"
+                data-aria-controls="conditional-lived-uk-2"
+              />
+              <label class="govuk-label govuk-radios__label" for="lived-uk01A">
+                Yes
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="lived-uk-conditional-3"
+                name="lived-uk01A"
+                type="radio"
+                value="No"
+                data-aria-controls="conditional-lived-uk-3"
+              />
+              <label class="govuk-label govuk-radios__label" for="lived-uk01A">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <details class="govuk-details govuk-!-padding-bottom-4">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text"
+            >Help with this question</span
+          >
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">
+            We need to know if you have always lived in the UK.
+          </p>
+
+          <p class="govuk-body">
+            This will help us find out if you already have a National Insurance
+            number.
+          </p>
+
+          <p class="govuk-body">Click No if:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              you were born in another country and later came to live in the UK
+            </li>
+            <li>
+              you were born in the UK, lived in another country, then moved back
+              to the UK
+            </li>
+          </ul>
+        </div>
+      </details>
+      <button class="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

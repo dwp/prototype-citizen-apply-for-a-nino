@@ -1,0 +1,47 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Was your application for a visa successful?
+    </h1>
+
+    <form class="form" action="visa-answer2" method="post">
+      <div class="govuk-form-group govuk-!-padding-bottom-4">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="visa-1" name="visa_02"
+              type="radio" value="Yes" {{ checked("visa_02", "Yes") }}>
+              <label class="govuk-label govuk-radios__label" for="work-looking">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="visa-2" name="visa_02"
+              type="radio" value="No" {{ checked("visa_02", "No") }}>
+              <label class="govuk-label govuk-radios__label" for="work-looking">
+                No
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="visa-3" name="visa_02"
+              type="radio" value="Awaiting Decision" {{ checked("visa_02",
+              "Awaiting Decision") }}>
+              <label class="govuk-label govuk-radios__label" for="work-neither">
+                I am waiting for a decision
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends "layouts/main.html" %} {% block pageTitle %}
+  Question page
+{% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Did we tell you to apply again for a National Insurance number?</h1>
+
+
+ <form class="form" action="duplicates_2b_answer" method="post">
+
+          <p class="govuk-body">If you phoned the application helpline and we told you to apply again, select yes.</p>
+
+         <div class="govuk-form-group govuk-!-padding-bottom-4">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+
+              
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="duplicates" name="duplicates" type="radio" value="Yes" data-aria-controls="duplicates1">
+                <label class="govuk-label govuk-radios__label" for="duplicates-yes">
+                  Yes
+                </label>
+              </div>
+              
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="duplicates" name="duplicates" type="radio"  value="No" data-aria-controls="duplicates2">
+                <label class="govuk-label govuk-radios__label" for="duplicates-no">No</label>
+              </div>
+            
+ 
+            </div>
+           </div>
+           </div>
+         </fieldset>
+        </div>
+
+<br>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+<br><br>
+
+
+
+<br><br><br><br>
+            <details class="govuk-details govuk-!-padding-bottom-4">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text" style="color:#FF0000">
+                  Error message
+                </span>
+              </summary>
+              <div class="govuk-details__text"><p style="color:#FF0000">
+                Select an option to continue</p>
+              </div>
+            </details>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

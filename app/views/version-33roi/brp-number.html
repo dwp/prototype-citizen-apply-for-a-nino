@@ -1,0 +1,121 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Do you have a biometric residence permit (BRP)?
+    </h1>
+
+    <form class="form" action="brp-answer" method="post">
+      <div class="govuk-form-group">
+        <fieldset
+          class="govuk-fieldset"
+          aria-describedby="how-contacted-conditional-hint"
+        >
+          <div
+            class="govuk-radios govuk-radios--conditional"
+            data-module="govuk-radios"
+          >
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="brp-conditional-2"
+                name="brp-document"
+                type="radio"
+                value="Yes"
+                data-aria-controls="brp-doc"
+              />
+              <label class="govuk-label govuk-radios__label" for="brp-doc">
+                Yes
+              </label>
+            </div>
+            <div
+              class="govuk-radios__conditional govuk-radios__conditional--hidden"
+              id="brp-doc"
+            >
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="brp-doc">
+                  Enter your biometric residence permit number
+                </label>
+                <input
+                  class="govuk-input govuk-!-width-one-third"
+                  id="brp-doc"
+                  name="brp-doc"
+                  type="brp-doc"
+                />
+              </div>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="brp-conditional3"
+                name="brp-document"
+                value="No"
+                type="radio"
+                data-aria-controls="brp-conditional-2"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="brp-conditional3"
+              >
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <details class="govuk-details govuk-!-padding-bottom-4">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            What is a biometric residence permit (BRP)?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">
+            A BRP is a secure identity card which contains personal details and
+            biometric information.
+          </p>
+
+          <p class="govuk-body">You will usually get a BRP if you:</p>
+
+          <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-8">
+            <li>apply to come to the UK for more than 6 months</li>
+            <li>extend your visa to more than 6 months</li>
+            <li>apply to settle in the UK</li>
+            <li>transfer your visa to a new passport</li>
+            <li>apply for certain Home Office travel documents</li>
+          </ul>
+
+          <p class="govuk-body">
+            A BRP looks similar to a UK residence card, but they are different.
+          </p>
+
+          <p class="govuk-body">
+            You may already have a National Insurance number on the back of your
+            BRP. If so, you can start using this National Insurance number now,
+            and close this application.
+          </p>
+          <p class="govuk-body">
+            <a
+              href="https://www.gov.uk/biometric-residence-permits"
+              target="_blank"
+              >Find out more about BRPs</a
+            >.
+          </p>
+
+          <!--
+    <p class="govuk-body"><img class="full-width-image govuk-!-margin-bottom-4" src="/public/images/card-example-xsmall.png" alt="Image showing where to find the number on a biometric residence permit (BRP). The number is on the front of the card in the top right corner.">
+-->
+        </div>
+      </details>
+
+      <button class="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Do you have a visa to live and study in the UK?
+    </h1>
+
+    <form class="form" action="visa-answer3" method="post">
+      <div class="govuk-form-group govuk-!-padding-bottom-4">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="visa-1" name="visa_03"
+              type="radio" value="Yes" {{ checked("visa_03", "Yes") }}>
+              <label class="govuk-label govuk-radios__label" for="work-looking">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="visa-2" name="visa_03"
+              type="radio" value="No" {{ checked("visa_03", "No") }}>
+              <label class="govuk-label govuk-radios__label" for="work-looking">
+                No
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="visa-3" name="visa_03"
+              type="radio" value="Awaiting Decision" {{ checked("visa_03",
+              "Awaiting Decision") }}>
+              <label class="govuk-label govuk-radios__label" for="work-neither">
+                I am waiting for a decision about my visa application
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+    </form>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">
+          Tell us how you proved your identity when you applied for a visa
+        </p>
+      </div>
+    </details>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">You don’t need to apply again</h1>
+
+    <h2 class="govuk-heading-m">If you applied less than 8 weeks ago</h2>
+    <p class="govuk-body">
+      We are still processing your application. We cannot give you an update on
+      your application before the end of this 8 week period.
+    </p>
+
+    <br /><br />
+
+    <h2 class="govuk-heading-m">If you applied more than 8 weeks ago</h2>
+    <p class="govuk-body">
+      You can contact us for an update. Call us using one of the numbers at the
+      bottom of the screen. If you have your application reference number, give
+      it to us when you call.
+    </p>
+
+    <br /><br />
+    <br /><br />
+    <br /><br />
+  </div>
+</div>
+
+{% endblock %}

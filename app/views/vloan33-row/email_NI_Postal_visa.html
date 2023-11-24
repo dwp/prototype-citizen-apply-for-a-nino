@@ -1,0 +1,247 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p><strong>To:</strong> {{ data['email-address'] }}</p>
+    <p>
+      <strong>Subject: </strong> Your application for a National Insurance
+      number
+    </p>
+    <br /><br />
+    <p>Dear {{ data['given-names'] }} {{ data['family-name'] }},</p>
+
+    <p class="govuk-body">
+      We have received your application for a National Insurance number.
+    </p>
+
+    <p class="govuk-body">
+      You now need to send us photocopies of your identity documents.
+    </p>
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text"
+        ><span class="govuk-warning-text__assistive">Warning</span>We cannot
+        make a decision about your application until we receive these
+        photocopies
+      </strong>
+    </div>
+
+    <br />
+    <h2 class="govuk-heading-l">What you need to do next</h2>
+    <br />
+
+    <ol class="app-task-list">
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">1. </span> Make a note of
+          your application reference number:
+        </h2>
+        <ul class="app-task-list__items">
+          <li>
+            <h3 class="govuk-heading-m">B0048572</h3>
+            <p>
+              This is the reference number for your application.<br />
+              It is not your National Insurance number.
+            </p>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">2. </span>Make a black and
+          white photocopy of the document you used to apply to the EU Settlement
+          Scheme or for a UK visa:
+        </h2>
+        <ul class="app-task-list__items">
+          <li>
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+              <li>
+                if you used your passport to apply to the EU Settlement Scheme
+                or for a UK visa, photocopy the page that includes your
+                photograph and your signature
+              </li>
+              <li>
+                if you used your national identity card to apply to the EU
+                Settlement Scheme, photocopy both sides of the card
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">3. </span>Print the
+          CA5400D form from <a href="CA5400_form.html">here</a>.
+        </h2>
+        <ul class="app-task-list__items">
+          <li>
+            Note that your application reference number (B0048572) is entered
+            automatically on page 1 of the form.
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">4. </span>Generate a new
+          immigration status share code for your application.
+        </h2>
+        <ul class="app-task-list__items">
+          <li>
+            <p>A share code:</p>
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+              <li>proves your immigration status</li>
+              <li>consists of 9 digits, for example: A1234567Z</li>
+              <li>
+                is different from any reference number you have been given
+              </li>
+              <li>is different from your National Insurance number</li>
+            </ul>
+            <br />
+            <p>
+              Share codes are only valid for 30 days. Generate a new code for
+              this application and then send it to us immediately, following
+              steps 5-8 below.
+            </p>
+            <p>To generate a share code:</p>
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+              <li>
+                go to
+                <a
+                  href="https://www.gov.uk/view-prove-immigration-status"
+                  target="_blank"
+                  >www.gov.uk/view-prove-immigration-status</a
+                >
+                - this will open in a new tab
+              </li>
+              <li>
+                follow the instructions to view and prove your immigration
+                status
+              </li>
+              <li>
+                when you see
+                <span style="font-weight: bold"
+                  >what do you need this share code for</span
+                >, select <br /><span style="font-weight: bold"
+                  >something else</span
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">5. </span>Fill in the rest
+          of the form with a black pen using BLOCK CAPITALS.
+        </h2>
+        <ul class="app-task-list__items">
+          <li></li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">6. </span> Write your new
+          share code on page 2 of the form.
+        </h2>
+        <ul class="app-task-list__items">
+          <li></li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">7. </span>Put the
+          completed CA5400D form and your photocopied document in an envelope.
+        </h2>
+        <ul class="app-task-list__items">
+          <li></li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">8. </span>Add the correct
+          postage and send it to:
+        </h2>
+        <ul class="app-task-list__items">
+          <li>
+            <div class="govuk-inset-text">
+              NINo Allocation<br />
+              Mail Opening Unit<br />
+              PO Box 42<br />
+              Limavady<br />
+              BT49 4AN
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <br /><br />
+    <p class="govuk-body">
+      We aim to contact you within 16 weeks of receiving your photocopied
+      identity documents to tell you if we have approved your application.
+    </p>
+    <p class="govuk-body">
+      <strong
+        >We cannot give you an update on your application before the end of this
+        16-week period.
+      </strong>
+    </p>
+    <p class="govuk-body">
+      We are working hard to process applications that have been delayed because
+      of the coronavirus (COVID-19) pandemic. We will review your application as
+      soon as we can.
+    </p>
+    <p class="govuk-body">
+      You can start work and get paid without a National Insurance number if you
+      can prove you can work in the UK. Your employer might ask for proof of
+      your right to work in the UK.
+    </p>
+    <br /><br />
+
+    <p><strong>Get help with your application </strong></p>
+
+    <p class="govuk-body">
+      Telephone: 0800 587 0024<br />
+      Textphone: 0800 587 0194<br />
+      Monday to Friday, 9am to 4pm<br />
+      Find out about call charges here:
+      <a href="https://www.gov.uk/call-charges" class="govuk-link"
+        >https://www.gov.uk/call-charges</a
+      >
+    </p>
+
+    <br />
+    <br />
+
+    <p class="govuk-body">Yours sincerely,</p>
+
+    <p class="govuk-body">
+      Office Manager <br />
+
+      Apply for a National Insurance number
+    </p>
+
+    <hr
+      class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+    />
+    <p>
+      Please don't reply to this message. DWP will never ask you to send any
+      usernames, passwords, personal, health/medical or bank account information
+      via email. Any email sent in response will be deleted without being read.
+    </p>
+    {% endblock %}
+  </div>
+</div>

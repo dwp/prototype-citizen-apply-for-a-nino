@@ -1,0 +1,85 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Do you need a National Insurance number?</h1>
+
+    <div class="govuk-inset-text">
+      <p class="govuk-body">
+        This service is also available in Welsh (<a href="">Cymraeg</a>).
+      </p>
+    </div>
+    <!--
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text"><span class="govuk-warning-text__assistive">Warning</span> You can only use this online service if the Department for Work and Pensions (DWP) or the Department for Communities (DfC) invited you to do so.</strong>
+    </div>
+-->
+
+    <p class="govuk-body">
+      You only need to apply for a National Insurance number if you:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-8">
+      <li>live in the UK <b>and</b></li>
+      <li>have the right to work in the UK</li>
+    </ul>
+
+    <p class="govuk-body">You must also:</p>
+
+    <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-8">
+      <li>be working in the UK <b>or</b></li>
+      <li>have an offer to start work in the UK <b>or</b></li>
+      <li>be looking for work in the UK</li>
+    </ul>
+
+    <p class="govuk-body">
+      You do not need to apply for a National Insurance number if you:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-8">
+      <li>
+        had a National Insurance number before (read what to do
+        <a href="https://www.gov.uk/lost-national-insurance-number"
+          >if you have lost your National Insurance number)</a
+        >
+      </li>
+      <li>are a UK resident aged 19 or under</li>
+      <li>
+        have a biometric residence permit (BRP) with a National Insurance number
+        on the back
+      </li>
+      <li>are applying for benefits or a student loan</li>
+    </ul>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+        <div class="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input
+              class="govuk-checkboxes__input"
+              id="waste-3"
+              name="waste"
+              type="checkbox"
+              value="farm"
+            />
+            <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+              I have read and understood the information on this page
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <br /><br />
+    <form action="start_2" method="post" novalidate>
+      <button type="submit" class="govuk-button">Continue</button>
+    </form>
+    <br /><br /><br /><br />
+  </div>
+</div>
+
+{% endblock %}

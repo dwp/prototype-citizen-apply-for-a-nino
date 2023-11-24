@@ -1,0 +1,95 @@
+{% extends "layouts/main.html" %} {% block pageTitle %}
+  Question page
+{% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Have you or your partner applied for any benefits?</h1>
+
+
+ <form class="form" action="benefits_a1_answer" method="post">
+
+          <p class="govuk-body">Benefits include Universal Credit, Personal Independence Payment (PIP), Pension Credit and others. See a full list of <a href="https://www.gov.uk/browse/benefits" target="_blank">benefits</a>.</p>
+
+         <div class="govuk-form-group govuk-!-padding-bottom-4">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+
+              
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="benefits" name="benefits" type="radio" value="yes" data-aria-controls="benefits1">
+                <label class="govuk-label govuk-radios__label" for="benefits-yes">
+                  Yes
+                </label>
+              </div>
+              
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="benefits" name="benefits" type="radio"  value="no" data-aria-controls="benefits2">
+                <label class="govuk-label govuk-radios__label" for="benefits-no">No, I/we have not applied for any benefits</label>
+              </div>
+            
+ 
+            </div>
+           </div>
+           </div>
+         </fieldset>
+        </div>
+
+<br>
+        <details class="govuk-details govuk-!-padding-bottom-4">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">What does “your partner” mean?</span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-body">“Your partner” means any of the following:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+              <li>your husband</li>
+              <li>your wife</li>
+              <li>your civil partner</li>
+              <li>someone you live with as if you are married or in a civil partnership</li>              
+            </ul>
+
+          </div>  
+        
+        </details>
+
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+<br><br>
+
+
+
+<br><br><br><br>
+            <details class="govuk-details govuk-!-padding-bottom-4">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text" style="color:#FF0000">
+                  Error message
+                </span>
+              </summary>
+              <div class="govuk-details__text"><p style="color:#FF0000">
+                Select an option to continue</p>
+              </div>
+            </details>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

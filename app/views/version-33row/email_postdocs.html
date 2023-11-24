@@ -1,0 +1,85 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p><strong>To:</strong> {{ data['email-address'] }}</p>
+    <p>
+      <strong>Subject: </strong> Your application for a National Insurance
+      number
+    </p>
+    <br /><br />
+    <p>Dear, {{ data['given-names'] }} {{ data['family-name'] }}</p>
+
+    <p class="govuk-body">
+      We have received your application for a National Insurance number.
+    </p>
+
+    <p class="govuk-body">
+      <strong>Your application reference number is:</strong>
+    </p>
+    <h3 class="govuk-heading-m">B0048572</h3>
+    <br />
+
+    <p class="govuk-body">
+      At the end of your application, we asked you to make photocopies of your
+      identity documents and post these to us. If you gave us an email address
+      when you applied, we also sent this information to you by email.
+    </p>
+
+    <p class="govuk-body">
+      We have not received your documents, so we cannot progress your
+      application.
+    </p>
+
+    <p class="govuk-body">
+      This means we cannot give you a National Insurance number.
+    </p>
+
+    <p class="govuk-body">
+      If you have already applied again for a National Insurance number, we are
+      dealing with this new application separately.
+    </p>
+
+    <p class="govuk-body">
+      If you have not applied again and you still need a National Insurance
+      number, you can apply again at
+      <a href="www.gov.uk/apply-national-insurance-number"
+        >www.gov.uk/apply-national-insurance-number</a
+      >.
+    </p>
+
+    <br />
+    <br />
+
+    <p class="govuk-body">Yours sincerely,</p>
+
+    <p class="govuk-body">
+      Office Manager <br />
+
+      Apply for a National Insurance number
+    </p>
+
+    <hr
+      class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+    />
+    <p>
+      Please don't reply to this message. DWP will never ask you to send any
+      usernames, passwords, personal, health/medical or bank account information
+      via email. Any email sent in response will be deleted without being read.
+    </p>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <a href="confirmation_noaction">Back to confirmation page</a>
+
+    {% endblock %}
+  </div>
+</div>

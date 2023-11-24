@@ -1,0 +1,250 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  #section1 {
+    height: 390px;
+  }
+  #section2 {
+    height: 300px;
+  }
+  #section3 {
+    height: 280px;
+  }
+  #section4 {
+    height: 330px;
+  }
+  #section5 {
+    height: 230px;
+  }
+  #section6 {
+    height: 400px;
+  }
+  #section7 {
+    height: 900px;
+  }
+</style>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Apply for a National Insurance number</h1>
+
+    <p class+="govuk-body">You need a National Insurance number to:</p>
+
+    <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-8">
+      <li>work</li>
+      <li>receive benefits</li>
+      <li>receive a student loan</li>
+      <li>
+        pay
+        <a href="https://www.gov.uk/pay-voluntary-class-3-national-insurance">
+          Class 3 voluntary National Insurance contributions so you can get a
+          state pension when you retire</a
+        >
+      </li>
+    </ul>
+
+    <p>
+      You can start work without a National Insurance number if you can prove
+      you have the right to work in the UK. You can also apply for benefits or a
+      student loan.
+    </p>
+    <br />
+    <div class="govuk-inset-text">
+      <p class="govuk-body">
+        This service is also available in Welsh <a href="">(Cymraeg).</a>
+      </p>
+    </div>
+    <br /><br />
+    <div class="main">
+      <p><a href="#section1">If you are working or looking for work</a></p>
+    </div>
+
+    <div class="main">
+      <p>
+        <a href="#section2">If you have lost your National Insurance number</a>
+      </p>
+    </div>
+
+    <div class="main">
+      <p>
+        <a href="#section3">If you live in the UK and are aged 19 or under</a>
+      </p>
+    </div>
+
+    <div class="main">
+      <p>
+        <a href="#section4">If you have a biometric residence permit (BRP) </a>
+      </p>
+    </div>
+
+    <div class="main">
+      <p>
+        <a href="#section5"
+          >If you want to apply for benefits or a student loan</a
+        >
+      </p>
+    </div>
+
+    <br /><br /><br /><br />
+
+    <div class="main" id="section1">
+      <h2 class="govuk-heading-l">Who can apply using this service</h2>
+
+      <p>You can apply for a National Insurance number if you:</p>
+
+      <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
+        <li>live in England, Scotland or Wales</li>
+        <li>have the right to work in the UK</li>
+        <li>are working or looking for work</li>
+        <li>have never had a National Insurance number before</li>
+      </ul>
+
+      <p>
+        <a
+          href="https://www.nidirect.gov.uk/articles/apply-national-insurance-number"
+          >You cannot currently apply for a National Insurance number in
+          Northern Ireland</a
+        >
+        because of coronavirus (COVID-19).
+      </p>
+    </div>
+
+    <div class="main" id="section2">
+      <h2 class="govuk-heading-l">Before you apply</h2>
+      <p>You do not need to use this service if you:</p>
+
+      <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
+        <li>
+          <a href="https://www.gov.uk/lost-national-insurance-number"
+            >have lost your National Insurance number
+          </a>
+        </li>
+        <li>are a UK resident aged 19 or under</li>
+        <li>
+          have a biometric residence permit (BRP) with a National Insurance
+          number on the back
+        </li>
+        <li>are applying for benefits or a student loan</li>
+      </ul>
+    </div>
+
+    <div class="main" id="section3">
+      <p><strong>If you’re a UK resident aged 19 or under</strong></p>
+      <p>
+        You should have received a National Insurance number in the 3 months
+        before your 16th birthday.
+      </p>
+      <p>
+        If you are aged 16 to 19 and did not receive a National Insurance
+        number,
+        <a
+          href="https://www.gov.uk/government/organisations/hm-revenue-customs/contact/national-insurance-numbers"
+          >call HM Revenue and Customs</a
+        >.
+      </p>
+    </div>
+
+    <div class="main" id="section4">
+      <h2 class="govuk-heading-l">
+        If you have a biometric residence permit (BRP)
+      </h2>
+      <p>
+        You may already have a National Insurance number on the back of your
+        <a href="https://www.gov.uk/biometric-residence-permits">BRP</a>.
+      </p>
+      <p>
+        If there is a National Insurance number on your BRP, you can start using
+        it straight away.
+      </p>
+      <p>
+        If there is no National Insurance number on your BRP, you can apply for
+        one using this service.
+      </p>
+    </div>
+
+    <div class="main" id="section5">
+      <p><strong>If you’re applying for benefits or a student loan</strong></p>
+      <p>You do not need to apply for a National Insurance number separately</p>
+      <p>
+        You will receive a National Insurance number if your application for
+        benefits or a student loan is successful.
+      </p>
+    </div>
+
+    <div class="main" id="section6">
+      <h2 class="govuk-heading-l">After you apply</h2>
+      <p>We will tell you what you need to do next.</p>
+      <p>
+        If you have a Biometric Residence Permit (BRP) or have EU Settled
+        Status, we will ask you to send us proof of your identity. Otherwise, we
+        will tell you how to make an appointment with us.
+      </p>
+      <p>We aim to make a decision within 4 weeks after:</p>
+      <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
+        <li>you attend an appointment with us</li>
+        <li>or we receive your proof of identity</li>
+      </ul>
+    </div>
+
+    <div class="main" id="section7">
+      <h2 class="govuk-heading-l">Apply for a National Insurance number</h2>
+
+      <p class="govuk-body">
+        Telephone: 0800 141 2075xx<br />
+        Textphone: 0800 141 2438xx<br />
+        Monday to Friday, 8am to 6pm<br />
+        <a href="https://www.gov.uk/call-charges" class="govuk-link"
+          >Find out about call charges</a
+        >
+      </p>
+      <br />
+
+      <p><strong> Get help with your application </strong></p>
+
+      <p>Contact the National Insurance helpline if you:</p>
+      <ul class="govuk-list govuk-list--bullet govuk-!-margin-bottom-6">
+        <li>can not use digital services</li>
+        <li>have a question about your application</li>
+      </ul>
+
+      <br />
+      <p>
+        <strong
+          >National Insurance number application helpline (England, Scotland and
+          Wales)
+        </strong>
+      </p>
+      <p class="govuk-body">
+        Telephone: 0800 141 2075xx<br />
+        Textphone: 0800 141 2438xx<br />
+        Monday to Friday, 8am to 6pm<br />
+        <a href="https://www.gov.uk/call-charges" class="govuk-link"
+          >Find out about call charges</a
+        >
+      </p>
+      <br /><br />
+
+      <p><strong>British Sign Language (BSL) video relay service</strong></p>
+      <p class="govuk-body">
+        You can use the
+        <a href="https://main.signvideo.me/app/8/10954"
+          >BSL video relay service
+        </a>
+        to apply for a National Insurance Number.
+      </p>
+      <p>
+        <a href="https://www.youtube.com/watch?v=Osx7FFxFpNY"
+          >Find out how to use the service</a
+        ><br />
+        Monday to Friday, 8am to 4pm
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

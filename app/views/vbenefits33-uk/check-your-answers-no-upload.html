@@ -1,0 +1,576 @@
+{% extends "layouts/main.html" %} {% block pageTitle %}
+  Question page
+{% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers before sending your application</h1>
+<br>
+
+
+      <h2 class="govuk-heading-m">Personal Details</h2>
+
+
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+             Applied for benefits
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Yes
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="benefits_a1">
+              Change
+            </a>
+          </dd>
+        </div>
+
+
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Name</dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['given-names'] }} {{ data['family-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="name">
+              Change
+            </a>
+          </dd>
+        </div>
+
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+          Previous names
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['any-other-names'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="q04-any-other-names-yn">
+              Change
+            </a>
+          </dd>
+        </div>
+
+
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+           Male / female
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['sex'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="male-female">
+              Change
+            </a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Nationality
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['filter-nationality'] }}
+          <dd class="govuk-summary-list__actions">
+            <a href="nationality">
+              Change
+               
+            </a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ [
+              data['dob-day'],
+              data['dob-month'],
+              data['dob-year']
+            ] | formatDate }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="date-of-birth">
+              Change
+               
+            </a>
+          </dd>
+        </div>
+
+
+     
+     
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Always lived <br>in the UK
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['lived-uk04A'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="lived-uk_4A">
+            Change
+             
+          </a>
+        </dd>
+      </div>
+
+
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Arrival date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ [
+              data['dol-day'],
+              data['dol-month'],
+              data['dol-year']
+            ] | formatDate }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="lived-uk_4B"">
+              Change
+               
+            </a>
+          </dd>
+        </div>
+
+
+
+
+    </dl>
+
+
+   <h2 class="govuk-heading-m">Contact details</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            UK address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            30 Springbank Road<br/>
+            Newcastle upon Tyne<br/>
+            NE2 9PQ
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="address">
+              Change
+            </a>
+          </dd>
+        </div>
+
+
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            UK address for letters
+          </dt>
+          <dd class="govuk-summary-list__value">
+            35 Scotch Orchard Road<br/>
+            Newcastle upon Tyne<br/>
+            NE5 3PB
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="address-correspondence-question">
+              Change
+            </a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['email-address'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="email-address">
+              Change
+              <span class="govuk-visually-hidden"> email address</span>
+            </a>
+          </dd>
+        </div>
+
+
+
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Telephone number
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  {{ data['phone-number']}}
+                </dd>
+                <dd class="govuk-summary-list__actions">
+                  <a href="phone-number">
+                    Change
+                    <span class="govuk-visually-hidden"> telephone number</span>
+                  </a>
+                </dd>
+              </div>
+
+
+</dl>
+
+
+
+    <h2 class="govuk-heading-m">Identity</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Passport number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          123.456.78
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="passport-number">
+            Change
+          </a>
+        </dd>
+      </div>
+
+
+
+ <!--
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Biometric residence permit number
+        </dt>
+        <dd class="govuk-summary-list__value">
+         123.456
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="brp-number">
+            Change
+          </a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Visa application
+        </dt>
+        <dd class="govuk-summary-list__value">
+          No
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="visa">Change</a>
+        </dd>
+      </div>
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Visa application successful
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="visa">
+            Change
+             
+          </a>
+        </dd>
+      </div>
+
+     <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Visa application method
+        </dt>
+        <dd class="govuk-summary-list__value">
+          UK Immigration ID Check app
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="visa">
+            Change
+             
+          </a>
+        </dd>
+      </div>
+
+  
+  
+
+     <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Immigration share code
+        </dt>
+        <dd class="govuk-summary-list__value">
+          123.456.789
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="visa">
+            Change
+             
+          </a>
+        </dd>
+      </div>
+
+
+
+
+          <div class="govuk-summary-list__row">
+             <dt class="govuk-summary-list__key">
+               EU Settlement Scheme application
+             </dt>
+             <dd class="govuk-summary-list__value">
+              Yes
+             </dd>
+             <dd class="govuk-summary-list__actions">
+               <a href="eu_settlement_1">
+                 Change
+                 <span class="govuk-visually-hidden"> other nationalities</span>
+               </a>
+             </dd>
+           </div>
+
+           <div class="govuk-summary-list__row">
+             <dt class="govuk-summary-list__key">
+               EU Settlement Scheme status
+             </dt>
+             <dd class="govuk-summary-list__value">
+               Settled
+             </dd>
+             <dd class="govuk-summary-list__actions">
+               <a href="eu_settlement_2">
+                 Change
+                 <span class="govuk-visually-hidden"> other nationalities</span>
+               </a>
+             </dd>
+           </div>
+
+           <div class="govuk-summary-list__row">
+             <dt class="govuk-summary-list__key">
+               Immigration share code
+             </dt>
+             <dd class="govuk-summary-list__value">
+               123.456.789
+             </dd>
+             <dd class="govuk-summary-list__actions">
+               <a href="eu_settlement_2">
+                 Change
+                 <span class="govuk-visually-hidden"> other nationalities</span>
+               </a>
+             </dd>
+           </div>
+
+
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Certificate of application or
+          Home Office reference number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['ho-doc'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="home-office-immigration">
+            Change
+             
+          </a>
+        </dd>
+      </div>-->
+
+    </dl>
+
+
+
+
+
+
+<h2 class="govuk-heading-m">Document Upload</h2>
+
+
+   <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+ 
+     <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+           Documents uploaded
+        </dt>
+        <dd class="govuk-summary-list__value">
+               No
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="upload_optout">
+            Change
+          </a>
+        </dd>
+      </div>
+<!--
+     <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+           Passport
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <img src="/public/images/document_example.png" width="140" display="inline-block" height="180" ;>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="upload_11">
+            Change
+          </a>
+        </dd>
+      </div>
+      -->
+<!-- 
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+           You with your passport
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <img src="/public/images/photo_check_old.png" width="140" display="inline-block" height="140" ;>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="upload_11">
+            Change
+          </a>
+        </dd>
+      </div>     
+-->
+<!-- 
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+           Front of BRP
+        </dt>
+        <dd class="govuk-summary-list__value">
+         <img src="/public/images/brp_front.png" width="130" display="inline-block" height="80" ;>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="upload_11a">
+            Change
+          </a>
+        </dd>
+      </div>
+
+    <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+           Back of BRP
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <img src="/public/images/brp_back.png" width="180" display="inline-block" height="100" ;>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="upload_18a">
+            Change
+          </a>
+        </dd>
+      </div>
+-->
+
+<!-- 
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+           Visa in Passport
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <img src="/public/images/visa_passport.jpeg" width="140" display="inline-block" height="110" ;>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a href="upload_20">
+            Change
+          </a>
+        </dd>
+      </div> 
+
+-->
+</dl>
+
+
+
+
+      <h2 class="govuk-heading-m">Now send your application</h2>
+
+      <p>I understand that if I knowingly give information that is incorrect or incomplete, I may be liable to prosecution or other action.</p>
+
+      <p>By submitting this application I confirm that, to the best of my knowledge, the details and evidence I have provided are correct and complete.</p>
+
+<br>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+
+    <div class="govuk-checkboxes">
+
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          I have read and understood the information on this page
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+<br/>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text"><span class="govuk-warning-text__assistive">Warning</span>Once you click ‘Accept and send’, you will not be able to view or change this information online.</strong>
+      </div>
+
+
+<br/>
+
+<form action="confirmation_GB_Serco" method="post" novalidate>
+
+  <input type="hidden" name="answers-checked" value="true">
+
+  <button type="submit" class="govuk-button">
+    Accept and send
+  </button>
+
+
+
+</form>
+
+<br>
+<br><br><br>
+            <details class="govuk-details govuk-!-padding-bottom-4">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text" style="color:#FF0000">
+                      Error message 1
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text"><p style="color:#FF0000">
+                    Check the box to confirm that you understand the information on this page</p>
+                  </div>
+                </details>
+
+
+
+
+
+
+    </div>
+  </div>
+{% endblock %}

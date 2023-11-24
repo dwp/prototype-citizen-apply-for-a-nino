@@ -1,0 +1,70 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      What was your surname before it was {{ data['family-name'] }}?
+    </h1>
+
+    <form class="form" action="q04-any-other-names-yn-change" method="post">
+      <div class="govuk-form-group govuk-!-padding-bottom-4">
+        <label class="govuk-label" for="family-name"> Surname(s) </label>
+
+        <input
+          class="govuk-input"
+          id="family-name"
+          name="family-name"
+          type="text"
+          autocomplete="name"
+          spellcheck="false"
+          value="{{ data['family-name'] }}"
+        />
+      </div>
+
+      <button class="govuk-button">Continue</button>
+    </form>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 1
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">Enter your surname</p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 2
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">
+          Your surname must only include letters, spaces and these 3 special
+          characters . – ‘"
+        </p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 3
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">
+          Your surname must be between 1 and 35 characters
+        </p>
+      </div>
+    </details>
+  </div>
+</div>
+
+{% endblock %}

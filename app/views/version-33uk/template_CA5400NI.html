@@ -1,0 +1,135 @@
+{% extends "layouts/main.html" %} {% block pageTitle %}
+  Question page
+{% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Apply for a National Insurance number</h1>
+
+
+      <p class="govuk-body">You need to complete and post this form to us.</p>
+
+      <p class="govuk-body">You also need to include photocopies of your identify documents and any other documents we have asked you for.</p>
+
+      <p class="govuk-body">Return this form and your photocopied documents to the address we provided after submitting your application for a National Insurance number.</p><br>
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l">
+          1. What is your name?
+          </label>
+        </h1>
+        <p class="govuk-body">Write your name as shown on your identity documents.<br>
+          For example, the name on your passport.</p>
+        <label class="govuk-label" for="weight">First names</label>
+        <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text"><br><br>
+        <label class="govuk-label" for="weight">Surname</label>
+        <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+      </div>
+
+<br><br>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              2. Date of Birth
+            </h1>
+          </legend>
+            <p class="govuk-body">
+            For example, 27 3 2007
+          </p>
+          <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+<br><br>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              3. Application Reference Number
+            </h1>
+          </legend>
+            <p class="govuk-body">This is the reference number we gave you at the end of your online application. It consists of 1 letter and 7 numbers.</p>
+
+            <p class="govuk-body">For example, B1234567</p>
+
+
+          <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                  Reference Number</label>
+                <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+            </div>
+
+          </div>
+
+        </fieldset>
+      </div>
+
+<br><br>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              4. Immigration status share code
+            </h1>
+          </legend>
+          <p class="govuk-body">If you have settled or pre-settled status under the European Union Settlement Scheme, you also need to give us a share code.</p>
+
+            <p class="govuk-body">Share codes are only valid for 30 days. Please generate a new code for this application, write it on this form and post it straight away.</p>
+
+            <p class="govuk-body">To get a share code go to <a href="http://www.gov.uk/view-prove-immigration-status">www.gov.uk/view-prove-immigration-status</a></p>
+
+          <div class="govuk-date-input" id="passport-issued">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="passport-issued-day">Share Code</label>
+                <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+            </div>
+
+          </div>
+
+        </fieldset>
+      </div>
+
+    </div>
+  </div>
+
+
+  <a href="template_NINOL08"> Link to Letter </a> <br/><br/>
+
+{% endblock %}

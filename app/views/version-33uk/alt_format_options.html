@@ -1,0 +1,53 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      How would you like to receive information from us?
+    </h1>
+
+    <form class="form" action="email_address" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="alt_format-1"
+              name="alt_format" type="radio" value="Male" {{
+              checked("alt_format", "Male") }}>
+              <label class="govuk-label govuk-radios__label" for="alt_format-1">
+                Audio
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="alt_format-2"
+              name="alt_format" type="radio" value="Female" {{
+              checked("alt_format", "Female") }}>
+              <label class="govuk-label govuk-radios__label" for="alt_format-2">
+                Braille
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="alt_format-2"
+              name="alt_format" type="radio" value="Female" {{
+              checked("alt_format", "Female") }}>
+              <label class="govuk-label govuk-radios__label" for="alt_format-2">
+                Large print
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <br />
+
+      <button class="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

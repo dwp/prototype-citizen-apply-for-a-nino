@@ -1,0 +1,57 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      What is your status under the EU Settlement Scheme?
+    </h1>
+
+    <form class="form" action="settlement-answer2" method="post">
+      <div class="govuk-form-group govuk-!-padding-bottom-4">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="settlement-answer"
+              name="settlement-answer02" type="radio" value="Settled" {{
+              checked("plan-to-work", "Settled") }}>
+              <label class="govuk-label govuk-radios__label" for="settlement">
+                I have settled status
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="settlement-answer"
+              name="settlement-answer02" type="radio" value="Pre-settled" {{
+              checked("plan-to-work", "Pre-Settled") }}>
+              <label class="govuk-label govuk-radios__label" for="settlement">
+                I have pre-settled status
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="settlement-answer"
+              name="settlement-answer02" type="radio" value="Awaiting Decision"
+              {{ checked("plan-to-work", "Awaiting Decision") }}>
+              <label class="govuk-label govuk-radios__label" for="settlement">
+                I am waiting for a decision
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="settlement-answer"
+              name="settlement-answer02" type="radio" value="No Resolution Yet"
+              {{ checked("plan-to-work", "No Resolution Yet") }}>
+              <label class="govuk-label govuk-radios__label" for="settlement">
+                My application was refused
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

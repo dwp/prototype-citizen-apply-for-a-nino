@@ -1,0 +1,127 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Do you have a visa sticker (vignette) in your passport?
+    </h1>
+
+    <form class="form" action="vignette-answer1" method="post">
+      <div class="govuk-form-group">
+        <fieldset
+          class="govuk-fieldset"
+          aria-describedby="how-contacted-conditional-hint"
+        >
+          <p class="govuk-body">
+            If your application for a UK visa was successful, you may have a
+            visa sticker (called a vignette) inside your passport
+          </p>
+          <p></p>
+
+          <div
+            class="govuk-radios govuk-radios--conditional"
+            data-module="govuk-radios"
+          >
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                name="vignette-answer01"
+                type="radio"
+                value="Yes"
+                data-aria-controls="vignette-answer"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="vignette-answer1-yes"
+              >
+                Yes
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                name="vignette-answer01"
+                type="radio"
+                value="No"
+                data-aria-controls="vignette-answerx"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="vignette-answer1"
+              >
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <br /><br />
+
+      <details class="govuk-details govuk-!-padding-bottom-4">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text"
+            >What is a visa sticker (vignette)?</span
+          >
+        </summary>
+        <div class="govuk-details__text">
+          <br />
+
+          <table width="700px">
+            <tr valign="top">
+              <td width="200px">
+                <img
+                  src="/public/images/visa_help1.png"
+                  width="160"
+                  height="180"
+                  ;
+                />
+              </td>
+              <td width="500px">
+                A visa sticker (vignette) looks like this. Click yes <br />if
+                you have one of these in your passport. The sticker<br />
+                or vignette shows:
+                <ul>
+                  <li>the type of visa you have</li>
+                  <li>the dates your visa is valid</li>
+                  <li>the conditions of your visa</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr height="30px">
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr valign="top" ;>
+              <td width="200px">
+                <img
+                  src="/public/images/visa_help2.png"
+                  width="160"
+                  height="180"
+                  ;
+                />
+              </td>
+              <td width="500px">
+                You may have an ink stamp in your passport that <br />
+                looks like this. <br />
+                <br />Click no if you only have one of these in your passport.
+              </td>
+            </tr>
+          </table>
+        </div>
+      </details>
+
+      <button class="govuk-button">Continue</button>
+
+      <br /><br /><br />
+      <a href="../version-31Brow/visa_vignette">View Visa Question B</a>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

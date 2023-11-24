@@ -1,0 +1,125 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Tell us why you’re applying for a National Insurance number again
+    </h1>
+
+    <form class="form" action="duplicate_why_answer" method="post">
+      <p class="govuk-body">Select all that apply.</p>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="duplicate-hint">
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="duplicate-1"
+                name="duplicate-1"
+                type="checkbox"
+                value="Updates"
+              />
+              <label
+                class="govuk-label govuk-checkboxes__label"
+                for="duplicates_why"
+              >
+                I want to change my application (for example, I’ve moved house
+                or I forgot to give my middle name)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="duplicate-2"
+                name="duplicate-2"
+                type="checkbox"
+                value="No reply"
+              />
+              <label
+                class="govuk-label govuk-checkboxes__label"
+                for="duplicates_why"
+              >
+                I didn’t receive a reply about my application
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="duplicate-3"
+                name="duplicate-3"
+                type="checkbox"
+                value="Refused application"
+              />
+              <label
+                class="govuk-label govuk-checkboxes__label"
+                for="duplicates_why"
+              >
+                I received a letter saying my application had been refused
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="duplicate-4"
+                name="duplicate-4"
+                type="checkbox"
+                value="Refused application"
+              />
+              <label
+                class="govuk-label govuk-checkboxes__label"
+                for="duplicates_why"
+              >
+                I want to upload my identity document(s) online instead of going
+                to an appointment
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="duplicate-5"
+                name="duplicate-5"
+                type="checkbox"
+                value="Refused application"
+              />
+              <label
+                class="govuk-label govuk-checkboxes__label"
+                for="duplicates_why"
+              >
+                I was told to apply again when I spoke to someone on the
+                application helpline
+              </label>
+            </div>
+
+            <br />
+
+            <p class="govuk-body">or</p>
+
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="duplicate-7"
+                name="duplicate-7"
+                type="checkbox"
+                value="Other"
+              />
+              <label
+                class="govuk-label govuk-checkboxes__label"
+                for="duplicates_why"
+              >
+                Other
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

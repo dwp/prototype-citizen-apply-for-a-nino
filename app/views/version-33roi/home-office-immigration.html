@@ -1,0 +1,72 @@
+{% extends "layouts/main.html" %} {% block pageTitle %}
+  Question page
+{% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+{% block pageTitle %}
+Question page
+{% endblock %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-xl">Do you have a certificate of application or a reference number from the UK Home Office?</h1>
+
+<p>The UK Home Office may give you a certificate of application or a reference number if you are from a non-EU country and you have no other way to prove your identity. </p>
+
+<p>If you have an Application Registration Card (ARC), there may be a reference number on the card.</p>
+
+    <form class="form" action="home-office-answer" method="post">
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="pass-hint">
+
+
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+           <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="ho-conditional-4" name="ho-document" type="radio"  value="Yes"  data-aria-controls="ho-doc">
+            <label class="govuk-label govuk-radios__label" for="ho-doc">
+              Yes
+            </label>
+          </div>
+
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="ho-doc">
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="ho-doc">
+                Enter your reference number
+              </label>
+              <input class="govuk-input govuk-!-width-one-third" id="ho-doc" name="ho-doc" type="ho-doc">
+            </div>
+          </div>
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="ho-conditional3" name="ho-document" value="No" type="radio" data-aria-controls="xx">
+            <label class="govuk-label govuk-radios__label" for="ho-conditional2">
+              No
+            </label>
+          </div>
+
+
+		</fieldset>
+  </div>
+
+
+
+
+  <button class="govuk-button">Continue</button>
+
+    </form>
+
+
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

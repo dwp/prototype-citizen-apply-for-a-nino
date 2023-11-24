@@ -1,0 +1,90 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Have you applied to the EU Settlement Scheme?
+    </h1>
+
+    <form class="form" action="settlement-answer1" method="post">
+      <div class="govuk-form-group">
+        <fieldset
+          class="govuk-fieldset"
+          aria-describedby="how-contacted-conditional-hint"
+        >
+          <p>
+            You do not need to have settled or pre-settled status to get a
+            National Insurance number.
+          </p>
+
+          <div
+            class="govuk-radios govuk-radios--conditional"
+            data-module="govuk-radios"
+          >
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                name="settlement-answer01"
+                type="radio"
+                value="Yes"
+                data-aria-controls="settlement-answer"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="settlement-answer1-yes"
+              >
+                Yes
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                name="settlement-answer01"
+                type="radio"
+                value="No"
+                data-aria-controls="settlement-answerx"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="settlement-answer1"
+              >
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <details class="govuk-details govuk-!-padding-bottom-4">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            What is the EU Settlement Scheme?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>
+            If you are from the EU, Switzerland, Norway, Iceland or
+            Lichtenstein, the EU Settlement Scheme allows you and your family to
+            continue living in the UK.
+          </p>
+          <p>
+            The deadline for most people to apply was 30 June 2021, but
+            <a
+              href="https://www.gov.uk/settled-status-eu-citizens-families"
+              target="_blank"
+              >you may still be able to apply</a
+            >.
+          </p>
+        </div>
+      </details>
+
+      <button class="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

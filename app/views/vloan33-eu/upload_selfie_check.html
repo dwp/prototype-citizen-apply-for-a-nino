@@ -1,0 +1,77 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Check the photo of yourself holding your passport next to your face
+    </h1>
+
+    <img
+      src="/public/images/photo_checK.png"
+      width="319"
+      display="inline-block"
+      height="250"
+      ;
+    />
+
+    <br /><br />
+    <p class="govuk-body">Your photo must:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>show your whole face</li>
+      <li>show all four corners of your passport</li>
+      <li>be in colour</li>
+      <li>not be edited</li>
+    </ul>
+
+    <div class="govuk-inset-text">
+      If your photo does not meet these requirements, we will not give you a
+      National Insurance number.
+    </div>
+
+    <!-- <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> -->
+
+    <br /><br />
+    <h3 class="govuk-heading-m">Does your photo meet these requirements?</h3>
+
+    <form class="form" action="upload_selfie_check_answer" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="upload_check"
+              name="upload_selfie_check_answer1" type="radio" value="Yes" {{
+              checked("upload_check", "Yes") }}>
+              <label class="govuk-label govuk-radios__label" for="upload11">
+                Yes, my face and my passport are both clearly visible
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="upload_check"
+              name="upload_selfie_check_answer1" type="radio" value="No"{{
+              checked("upload_check", "No") }}>
+              <label class="govuk-label govuk-radios__label" for="upload11">
+                No, I need to take another photo
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <br /><br />
+      <br /><br />
+
+      <button class="govuk-button">Continue</button>
+    </form>
+
+    <br />
+    <br />
+
+    <br /><br />
+  </div>
+</div>
+
+{% endblock %}

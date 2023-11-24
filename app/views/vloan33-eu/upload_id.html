@@ -1,0 +1,62 @@
+{% extends "layouts/main.html" %} {% block pageTitle %}
+  Question page
+{% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Take a photo of your Identity card</h1>
+
+        <p class="govuk-body">Take a photo of the side that shows your picture and the Identity card number.</p>
+
+     <h3 class="govuk-heading-m">Check that:</h3>
+  
+    <ul class="govuk-list govuk-list--bullet">
+         <li>the document page is visible</li>
+         <li>the photo is in focus</li>
+         <li>we can read all the details on the card</li>
+      </ul> 
+      
+       
+<div class="govuk-inset-text">    <p><strong>Do not edit your photo. This includes changing the colours or using filters. We can only accept *.JPG, *.JPEG and *.PNG formats.</strong></p>
+ </div>
+
+   
+        <br><br>
+        <img src="/public/images/document_id.png" width="530" height="420" ;>
+      <br><br><br><br>
+
+        <form class="form" action="upload_id_check" method="post">
+
+
+      <h2 class="govuk-heading-m">Choose and upload your photo</h2>
+
+<br><br>
+
+
+                <input type="file" id="photo-button" hidden />
+                <label class="govuk-button govuk-button--secondary" data-module="govuk-button" style="color:#000" id="photo-label-text" for="photo-button" role="button">
+                    Choose file
+                </label>
+
+
+                
+     <br/><br/>
+       
+        <button class="govuk-button">Upload</button>
+        </form>
+              
+              <br><br>
+
+       
+            
+                <br /><br />
+            </div>
+        </div>
+    </div>
+
+
+    {% endblock %}

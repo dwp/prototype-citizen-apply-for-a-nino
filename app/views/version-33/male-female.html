@@ -1,0 +1,71 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Which of the following best describes you?</h1>
+
+    <form class="form" action="nationality" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sex-1" name="sex"
+              type="radio" value="Male" {{ checked("sex", "Male") }}>
+              <label class="govuk-label govuk-radios__label" for="sex-1">
+                Male
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sex-2" name="sex"
+              type="radio" value="Female" {{ checked("sex", "Female") }}>
+              <label class="govuk-label govuk-radios__label" for="sex-2">
+                Female
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <br />
+      <details class="govuk-details govuk-!-padding-bottom-4">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Why are we asking this question?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body">We use this information to:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>check whether you already have a National Insurance number</li>
+            <li>
+              and if not, to create a new National Insurance number for you
+            </li>
+          </ul>
+          <p class="govuk-body">
+            We understand that not everyone identifies as male or female. We
+            need you to select one of these options even if your identity
+            documents describe you in a different way, if you identify in a
+            diferent way, or if you prefer not to say.
+          </p>
+          <p class="govuk-body">
+            Your answer will not affect your application for a National
+            Insurance number.
+          </p>
+          <p class="govuk-body">
+            We will not give this information to your employer, school or
+            college. Your employer, school or college cannot see this
+            information from your National Insurance number.
+          </p>
+        </div>
+      </details>
+
+      <button class="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

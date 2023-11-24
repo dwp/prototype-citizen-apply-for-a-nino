@@ -1,0 +1,117 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl afn-20px-margin">
+      If we have questions about your application, can we phone you?
+    </h1>
+    <br />
+
+    <p class="govuk-body">
+      We will only use this number to contact you if we have questions about
+      your application for a National Insurance number.
+    </p>
+
+    <br />
+
+    <form class="form" action="passport-number" method="post">
+      <div class="govuk-form-group">
+        <div
+          class="govuk-radios govuk-radios--conditional"
+          data-module="govuk-radios"
+        >
+          <div class="govuk-radios__item">
+            <input
+              class="govuk-radios__input"
+              id="email"
+              name="xphone"
+              type="radio"
+              data-aria-controls="phone1"
+            />
+            <label class="govuk-label govuk-radios__label" for="phone">
+              Yes
+            </label>
+          </div>
+          <div
+            class="govuk-radios__conditional govuk-radios__conditional--hidden"
+            id="phone1"
+          >
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="phone1">
+                <p>
+                  Enter your telephone number including the country code<br />
+                  For example: +33 1 9900 1223
+                </p></label
+              >
+              <input
+                class="govuk-input govuk-!-width-one-third"
+                id="xphone"
+                name="phone"
+              />
+            </div>
+          </div>
+
+          <div class="govuk-radios__item">
+            <input
+              class="govuk-radios__input"
+              id="email"
+              name="xphone"
+              type="radio"
+              data-aria-controls="phone2"
+            />
+            <label class="govuk-label govuk-radios__label" for="phone">
+              No, I do not have a phone number
+            </label>
+          </div>
+          <div
+            class="govuk-radios__conditional govuk-radios__conditional--hidden"
+            id="phone2"
+          >
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="phone2">
+                <p>
+                  If you do not have a phone number, we will send you a letter.
+                  This may mean your application takes longer.
+                </p></label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <button class="govuk-button">Continue</button>
+    </form>
+    <br />
+
+    <br /><br /><br /><br />
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 1
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">Select yes if we can contact you by phone</p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 2
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">
+          Your telephone number must be 20 digits or less
+        </p>
+      </div>
+    </details>
+  </div>
+</div>
+
+{% endblock %}

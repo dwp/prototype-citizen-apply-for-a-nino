@@ -1,0 +1,141 @@
+{% extends "layouts/main.html" %} {% block pageTitle %}
+  Question page
+{% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Find out if you can upload your identity documents online</h1>
+
+      <p class="govuk-body">We can only give you a National Insurance number if we have proof of your identity. Depending on which identity documents you have, you may be able to prove your identity online by uploading photos of your documents during a new application for a National Insurance number.</p>
+
+      <br/><br/>
+      <h2 class="govuk-heading-m">If you have a passport </h2>
+
+      <p class="govuk-body">You can prove your identity online by uploading photos of your passport and any other identity documents as part of your application for a National Insurance number. We will check these documents against UK Home Office or UK Passport Office records.</p>
+
+
+
+
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+         If you have a British passport
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <p class='govuk-body'>You will need to take and upload:</p>
+         <ul class="govuk-list govuk-list--bullet">
+           <li>	a new photo of your passport</li>
+           <li>a separate photo of yourself holding your passport</li>
+        </ul>
+    </div>
+  </div>
+
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          If you have an Irish passport
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+      <p class='govuk-body'>If you only have an Irish passport, we cannot check your identity documents online in either UK Passport Office or UK Home Office records. You will need to attend an appointment to prove your identity after you apply.</p>
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+        If you have a passport from any country other than the UK or Ireland        </span>
+      </h2>
+    </div> <br/>
+    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+      <p class='govuk-body'>You will need to take and upload:
+       <ul class="govuk-list govuk-list--bullet">
+           <li>	a new photo of each identity document that you have</li>
+           <li>a separate photo of yourself holding your passport</li>
+        </ul>
+</p>
+    </div>
+  </div>
+
+
+    <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          If you have dual nationality and a British passport
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+      <p class='govuk-body'>You should use your British passport to apply.</p>
+    </div>
+  </div>
+
+</div>
+
+      <br/><br/>
+
+      <h2 class="govuk-heading-m">If you do not have a passport </h2>
+
+
+      <p class="govuk-body">Even if you have other identity documents, you cannot prove your identity online without a passport. You will need to attend an appointment to prove your identity after you apply. </p>
+
+      <br/><br/>
+
+<h2 class="govuk-heading-m">Can you upload photos of your identity documents?</h2>
+<br/>
+ <form class="form" action="duplicate_passport" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="passport-1" name="passport_dup" type="radio" value="Yes" {{ checked("passport", "Yes") }}>
+                <label class="govuk-label govuk-radios__label" for="passport-1">
+                  Yes
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="passport-2" name="passport_dup" type="radio" value="No" {{ checked("passport", "No") }}>
+                <label class="govuk-label govuk-radios__label" for="passport-2">
+                  No
+                </label>
+              </div>
+
+            </div>
+
+          </fieldset>
+        </div>
+ <button class="govuk-button">Continue</button>
+
+      </form>
+      <br/><br/>
+      <br/><br/>
+
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

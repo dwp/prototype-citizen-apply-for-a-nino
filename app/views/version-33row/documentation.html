@@ -1,0 +1,92 @@
+{% extends "layouts/main.html" %} {% block pageTitle %}
+  Question page
+{% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+
+
+
+ <div class="govuk-form-group govuk-!-padding-bottom-4">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios">
+
+
+        <h1 class="govuk-heading-xl">What you will need</h1>
+
+        <h3 class="govuk-heading-m">Before you start your application</h3>
+        <p class="govuk-body">You will need to provide at least one of the following:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li>your Passport</li>
+            <li>your Identity Card</li>
+            <li>your BRP</li>
+            <li>your visa</li>
+            <li>a way to take a photograph, such as a smartphone, tablet or digital camera</li>
+        </ul>
+        <br><br>
+        <h3 class="govuk-heading-m">Your personal information</h3>
+
+        <p class="govuk-body">We will only use your photographs to check your identity. Once we have done this, we will delete them.</p>
+
+        <br><br>
+        <h3 class="govuk-heading-m">Are you ready to continue?</h3>
+        
+        
+ 
+
+ <form class="form" action="plan-to-work" method="post">
+ 
+         <div class="govuk-form-group govuk-!-padding-bottom-4">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+
+              
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="upload" name="upload_01" type="radio" value="Yes" {{ checked("upload_01", "Yes") }}>
+                <label class="govuk-label govuk-radios__label" for="upload">
+                  Yes
+                </label>
+              </div>
+           
+           
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="upload" name="upload_01" type="radio" value="No" {{ checked("upload_01", "I can't") }}>
+                <label class="govuk-label govuk-radios__label" for="upload">
+                 No, I cannot upload my document online
+
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+     
+     
+        <br><br><br>
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        
+<br><br><br><br><br>
+   </fieldset>
+
+        <br /><br />
+        
+
+
+</form>
+
+ </div>
+</div>
+
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

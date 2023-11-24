@@ -1,0 +1,66 @@
+{% extends "layouts/main.html" %} {% block pageTitle %}
+  Question page
+{% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Take and upload a photo of the back of your biometric residence permit (BRP)</h1>
+
+<ol class="govuk-list govuk-list--number">
+ 
+ 
+  <li><strong>Get your BRP ready</strong></li>
+      <p>Turn your BRP over so that your picture and the BRP number are 
+      facing down</p>
+ 
+   <br/>
+  <li><strong>Take a photo</strong></li>
+    <p>Take a photo using your smartphone, tablet or digital camera, 
+        even if this side of your BRP is blank. </p>
+    <p><strong>Do not edit your photo. This includes changing the colours or using filters. We can only accept *.JPG, *.JPEG and *.PNG formats.</strong></p>
+  
+   <br/>
+  <li><strong>Check the photo</strong></li>
+       <p>Make sure that:</p>
+        <ul class="govuk-list govuk-list--bullet">
+         <li>all four corners of the BRP are visible</li>
+         <li>the photo is in focus</li>
+         <li>we can read any details written on the back of your BRP</li>
+      </ul> 
+  
+    <br/>
+  <li><strong>Save the photo</strong></li>
+      <p> Save the photo to the device you are using to apply for a National Insurance number. </p>
+</ol>
+   
+        <br><br>
+        <img src="/public/images/brp_back_example.png"  width="530" height="420";>
+     <br><br>   <br><br> 
+       
+
+
+                <input type="file" id="photo-button" hidden />
+                <label class="govuk-button govuk-button--secondary" data-module="govuk-button" style="color:#000" id="photo-label-text" for="photo-button" role="button">
+                    Upload your photo
+                </label>
+
+                
+     <br/><br/>
+
+<p class="govuk-body"> <a href="upload_brpback_check">(link to next page)</a>
+<br/>Screen Notes: after selecting the file, user is taken automatically to next page or file error will be shown</p>
+ 
+              
+                
+            
+                
+       
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

@@ -1,0 +1,177 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Tell us why you’re applying for a National Insurance number again
+    </h1>
+
+    <form class="form" action="duplicate_why_answer" method="post">
+      <p class="govuk-body">Select all that apply.</p>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="duplicate-hint">
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="duplicate-1"
+                name="duplicate-1"
+                type="checkbox"
+                value="Updates"
+              />
+              <label
+                class="govuk-label govuk-checkboxes__label"
+                for="duplicates_why"
+              >
+                My previous application was rejected
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="duplicate-2"
+                name="duplicate-2"
+                type="checkbox"
+                value="No reply"
+              />
+              <label
+                class="govuk-label govuk-checkboxes__label"
+                for="duplicates_why"
+              >
+                I did not receive a reply about my application
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="duplicate-3"
+                name="duplicate-3"
+                type="checkbox"
+                value="Refused application"
+              />
+              <label
+                class="govuk-label govuk-checkboxes__label"
+                for="duplicates_why"
+              >
+                I want to change my application (for example, I’ve moved house
+                or I forgot to give my middle name)
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="duplicate-4"
+                name="duplicate-4"
+                type="checkbox"
+                value="upload docuuments"
+              />
+              <label
+                class="govuk-label govuk-checkboxes__label"
+                for="duplicates_why"
+              >
+                I want to upload my identity documents online instead of going
+                to an appointment
+              </label>
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="duplicate-8"
+                name="duplicate-8"
+                type="checkbox"
+                value="Lost nino"
+              />
+              <label
+                class="govuk-label govuk-checkboxes__label"
+                for="duplicates_why"
+              >
+                I've lost my National Insurance number
+              </label>
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="duplicate-5"
+                name="duplicate-5"
+                type="checkbox"
+                value="Apply again"
+              />
+              <label
+                class="govuk-label govuk-checkboxes__label"
+                for="duplicates_why"
+              >
+                I was told to apply again when I spoke to someone on the
+                application helpline
+              </label>
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="duplicate-6"
+                name="duplicate-6"
+                type="checkbox"
+                value="Tried to phone"
+              />
+              <label
+                class="govuk-label govuk-checkboxes__label"
+                for="duplicates_why"
+              >
+                I tried to phone the application helpline and I could not get
+                through
+              </label>
+            </div>
+
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="duplicate-7"
+                name="duplicate-7"
+                type="checkbox"
+                value="Applied for someone else"
+              />
+              <label
+                class="govuk-label govuk-checkboxes__label"
+                for="duplicates_why"
+              >
+                I applied for someone else before
+              </label>
+            </div>
+            <br />
+            <p class="govuk-body">Or</p>
+
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="duplicate-9"
+                name="duplicate-9"
+                type="checkbox"
+                value="None"
+              />
+              <label
+                class="govuk-label govuk-checkboxes__label"
+                for="duplicates_why"
+              >
+                None of the above apply to me
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <br /><br />
+
+      <button class="govuk-button">Continue</button>
+    </form>
+
+    <br /><br />
+  </div>
+</div>
+
+{% endblock %}

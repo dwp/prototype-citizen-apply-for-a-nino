@@ -1,0 +1,79 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl afn-20px-margin">Check your email address</h1>
+    <br />
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        It looks like there's a mistake in the last part of your email address.
+      </strong>
+    </div>
+    <br />
+    <p class="govuk-body">joebloggs@hotnail.com</p>
+    <br />
+
+    <p class="govuk-body">Is this correct?</p>
+    <form class="form" action="phone-number" method="post">
+      <div class="govuk-form-group">
+        <div
+          class="govuk-radios govuk-radios--conditional"
+          data-module="govuk-radios"
+        >
+          <div class="govuk-radios__item">
+            <input
+              class="govuk-radios__input"
+              id="email"
+              name="xemail-address"
+              type="radio"
+              data-aria-controls="email-address1"
+            />
+            <label class="govuk-label govuk-radios__label" for="email-address">
+              Yes
+            </label>
+          </div>
+
+          <div class="govuk-radios__item">
+            <input
+              class="govuk-radios__input"
+              id="email"
+              name="xemail-address"
+              type="radio"
+              data-aria-controls="email-address2"
+            />
+            <label class="govuk-label govuk-radios__label" for="email-address">
+              No, I need to change it
+            </label>
+          </div>
+          <div
+            class="govuk-radios__conditional govuk-radios__conditional--hidden"
+            id="email-address2"
+          >
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="email-address2">
+                <p>Enter your email address</p></label
+              >
+              <input
+                class="govuk-input govuk-!-width-one-third"
+                id="xemail-address"
+                name="email-address"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <button class="govuk-button">Continue</button>
+    </form>
+    <br />
+  </div>
+</div>
+
+{% endblock %}

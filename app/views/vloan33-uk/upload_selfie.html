@@ -1,0 +1,92 @@
+{% extends "layouts/main.html" %} {% block pageTitle %}
+  Question page
+{% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form class="form" action="upload_selfie_check" method="post">
+ 
+<div class="govuk-grid-row">       
+          <h1 class="govuk-heading-xl">Take and upload a photo of yourself holding your passport next to your face</h1>
+
+
+    
+    <p class="govuk-body">We will manually check the image of your face to make sure it matches the photo in your passport. </p>
+<br>
+<ol class="govuk-list govuk-list--number">
+  <li><strong>Get your passport ready</strong></li>
+      <p>Hold your passport open to the pages that include your picture.</p>
+  <br/>
+  
+  <li><strong>Take a photo</strong></li>
+     <p class="govuk-body"> Using a smartphone, tablet or digital camera, take a photo of yourself holding
+       your passport next to your face. Someone else can take the photo for you. </p>
+
+    <p class="govuk-body">Your whole face must be clearly visible, and we need to be able to see that the passport photo is of you. You must:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>be facing forwards with a neutral expression and your eyes open </li>
+<li>not have anything covering your face</li>
+<li>not have any dark shadows hiding your face</li>
+<li>not be wearing sunglasses or tinted glasses</li></ul>
+
+ <p class="govuk-body"> If you need to wear glasses in your photo, make sure your eyes are not covered by the frames or by any glare, reflection or shadow.</p>
+
+<br/>
+
+<div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>Do not edit your photo. <br/>This includes changing the colours and using filters. We can only accept *.JPG, *.JPEG and *.PNG formats.</strong>
+</div>
+
+        <img src="/public/images/photo_you.png" width="720" display="inline-block" height="410" ;>
+
+
+      <br><br>
+<br/>
+  
+  <li><strong>Check the photo</strong></li>
+       <p>Make sure that:</p>
+        <ul class="govuk-list govuk-list--bullet">
+         <li>your whole face is visible</li>
+         <li>all four corners of your passport are visible</li>
+         <li>the photo is in focus</li>
+      </ul> 
+
+  <br/>
+
+  <li><strong>Save the photo</strong></li>
+      <p> Save the photo to the device you are using to apply for a National Insurance number. </p>
+</ol>
+
+
+<br><br><br><br>
+
+       <h2 class="govuk-heading-m">Choose and upload your photo</h2>
+
+<br><br>
+
+
+                <input type="file" id="photo-button" hidden />
+                <label class="govuk-button govuk-button--secondary" data-module="govuk-button" style="color:#000" id="photo-label-text" for="photo-button" role="button">
+                    Choose file
+                </label>
+
+                
+     <br/><br/><br>
+       
+        <button class="govuk-button">Upload</button>
+        </form>
+              
+            <br><br>
+                
+       
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

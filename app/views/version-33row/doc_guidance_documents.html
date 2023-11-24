@@ -1,0 +1,104 @@
+{% extends "layouts/main.html" %} {% block pageTitle %}
+  Question page
+{% endblock %} {% block beforeContent
+%}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">How to apply</h1>
+
+<p class="govuk-body"><strong> 1. Fill in the online application<strong></p>
+
+<br>
+<p class="govuk-body"><strong>2. Take photos of your passport, of yourself and of your biometric residence permit (BRP)<strong></p>
+
+
+
+     <p class="govuk-body">We will explain the requirements for these photos and show examples of each one.</p>
+
+
+<br>
+<p class="govuk-body"><strong>3. Check and upload photos<strong></p>
+  <p class="govuk-body">We will explain how to check each photo before you upload it.</p>
+
+
+
+<br>
+<p class="govuk-body"><strong>4. Wait to hear from us<strong></p>
+<p class="govuk-body">We aim to contact you within 4 weeks to tell you if we have approved your application</p>
+
+
+<div class="govuk-inset-text">We will only use your photos to check your identity. Once we have done this, we will delete them.</div>
+
+<br><br>
+
+<p class="govuk-body"><strong>Are you ready to continue?<strong></p>
+
+
+    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+
+ <form class="form" action="doc_guidance_sharecode" method="post">
+
+         <div class="govuk-form-group govuk-!-padding-bottom-4">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+
+
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="upload" name="upload_docs" type="radio" value="yes" data-aria-controls="doc1">
+                <label class="govuk-label govuk-radios__label" for="upload-yes">
+                  Yes
+                </label>
+              </div>
+
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="upload" name="upload_docs" type="radio"  value="no" data-aria-controls="doc2">
+                <label class="govuk-label govuk-radios__label" for="docno">No, I cannot upload photos online</label>
+              </div>
+
+             <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="doc2">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="doc2"> <p>If you cannot upload photos online, you will need to attend an appointment to prove your identity. We will explain what you need to do.</p></label> </div>
+              </div>
+            </div>
+            </div>
+           </div>
+           </div>
+         </fieldset>
+        </div>
+
+
+
+
+         <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+       </fieldset>
+
+
+</form>
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

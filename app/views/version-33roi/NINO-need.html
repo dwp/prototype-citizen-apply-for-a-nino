@@ -1,0 +1,78 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      You may not need a National Insurance number
+    </h1>
+
+    <br />
+    <p class+="govuk-body">
+      You told us that you are not working or looking for work.
+    </p>
+
+    <p class="govuk-body">
+      You can only apply for a National Insurance number using this online
+      service if you are working or looking for work. You cannot apply for a
+      National Insurance number using this service for any other reason.
+    </p>
+
+    <p class="govuk-body">
+      You can apply using this service in future if your circumstances change.
+    </p>
+
+    <p class="govuk-body">
+      You can now close your application. For your security, we will delete your
+      answers automatically after 60 minutes. Alternatively, you can
+      <a href="NINO-need-NO.html" class="govuk-link">delete your answers now</a
+      >.
+    </p>
+
+    <form class="form" action="NINO-need-NO" method="post">
+      <br /><br /><br />
+      <details class="govuk-details govuk-!-padding-bottom-4">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            I need a National Insurance number to get benefits or a student loan
+            paid
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          If you were told to apply for a National Insurance number to get
+          benefits or a student loan paid, you should not use this service. We
+          will contact you and tell you how to apply for a National Insurance
+          number.<br /><br />
+          If you entered your mobile number as part of your application for
+          benefits or a student loan, we will send you a text telling you what
+          to do. If you did not provide your mobile number, we will send you a
+          letter.
+        </div>
+      </details>
+
+      <details class="govuk-details govuk-!-padding-bottom-4">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            I was told that I need a National Insurance number for another
+            reason
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          You cannot apply for a National Insurance number for any other reason.
+          For example, you cannot apply for a National Insurance number only
+          because you need to open a bank account, open an Individual Savings
+          Account (ISA) or pay into a pension.
+          <br /><br />
+          If you have been told you need a National Insurance number for any
+          other reason, contact the organisation that told you this. They should
+          have an alternative process for people who do not have a National
+          Insurance number.
+        </div>
+      </details>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,151 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">When did you first move to the UK?</h1>
+    <p>
+      We need to know when you came to the UK to live or work for the first
+      time. Do not include dates you came here on holiday.
+    </p>
+
+    <form class="form" action="address" method="post">
+      <div class="govuk-form-group govuk-!-padding-bottom-4">
+        <fieldset
+          class="govuk-fieldset"
+          aria-describedby="dob-hint"
+          role="group"
+        >
+          <p>For example, 31 3 1980</p>
+          <div class="govuk-date-input" id="dob">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label
+                  class="govuk-label govuk-date-input__label"
+                  for="dob-day"
+                >
+                  Day
+                </label>
+                <input
+                  class="govuk-input govuk-date-input__input govuk-input--width-2"
+                  id="dob-day"
+                  name="dob-day"
+                  type="number"
+                  pattern="[0-9]*"
+                />
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="-month">
+                  Month
+                </label>
+                <input
+                  class="govuk-input govuk-date-input__input govuk-input--width-2"
+                  id="dob-month"
+                  name="dob-month"
+                  type="number"
+                  pattern="[0-9]*"
+                />
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label
+                  class="govuk-label govuk-date-input__label"
+                  for="dob-year"
+                >
+                  Year
+                </label>
+                <input
+                  class="govuk-input govuk-date-input__input govuk-input--width-4"
+                  id="dob-year"
+                  name="dob-year"
+                  type="number"
+                  pattern="[0-9]*"
+                />
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <br /><br />
+
+      <details class="govuk-details govuk-!-padding-bottom-4">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Help with this question
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>
+            If you have lived or worked in the UK more than once, tell us about
+            the first time you came to live or work here.
+          </p>
+          <p>
+            If you do not know the exact date you moved to the UK, enter an
+            estimate.
+          </p>
+        </div>
+      </details>
+      <button class="govuk-button">Continue</button>
+    </form>
+
+    <br /><br />
+
+    <br /><br />
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 1
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">Enter the date you first moved to the UK</p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 2
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">Enter a valid date</p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 3
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">
+          The date you first moved to the UK must be in the past
+        </p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 4
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">
+          The date you first moved to the UK must be the same as or after your
+          date of birth
+        </p>
+      </div>
+    </details>
+  </div>
+</div>
+
+{% endblock %}

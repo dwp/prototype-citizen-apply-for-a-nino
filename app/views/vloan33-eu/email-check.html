@@ -1,0 +1,108 @@
+{% extends "layouts/main.html" %} {% block pageTitle %} Apply for National Insurance Number {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl afn-20px-margin">
+      Is this email address correct?
+    </h1>
+    <br />
+    <p class="govuk-body">email@gmail.cm</p>
+
+    <br />
+    <form class="form" action="phone-number" method="post">
+      <div class="govuk-form-group">
+        <div
+          class="govuk-radios govuk-radios--conditional"
+          data-module="govuk-radios"
+        >
+          <div class="govuk-radios__item">
+            <input
+              class="govuk-radios__input"
+              id="email"
+              name="xemail-address"
+              type="radio"
+              data-aria-controls="email-address1"
+            />
+            <label class="govuk-label govuk-radios__label" for="email-address">
+              Yes, use this email address
+            </label>
+          </div>
+
+          <div class="govuk-radios__item">
+            <input
+              class="govuk-radios__input"
+              id="email"
+              name="xemail-address"
+              type="radio"
+              data-aria-controls="email-address2"
+            />
+            <label class="govuk-label govuk-radios__label" for="email-address">
+              No, I need to change it
+            </label>
+          </div>
+          <div
+            class="govuk-radios__conditional govuk-radios__conditional--hidden"
+            id="email-address2"
+          >
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="email-address2">
+                <p>Enter your address here</p></label
+              >
+              <input
+                class="govuk-input govuk-!-width-one-third"
+                id="xemail-address"
+                name="email-address"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <button class="govuk-button">Continue</button>
+    </form>
+    <br />
+    <br /><br /><br />
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 1
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">Select yes if you have an email address</p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 2
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">
+          Enter your email address in the format name@example.com
+        </p>
+      </div>
+    </details>
+
+    <details class="govuk-details govuk-!-padding-bottom-4">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text" style="color: #ff0000">
+          Error message 3
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <p style="color: #ff0000">
+          Your email address must be less than 100 characters
+        </p>
+      </div>
+    </details>
+  </div>
+</div>
+
+{% endblock %}
